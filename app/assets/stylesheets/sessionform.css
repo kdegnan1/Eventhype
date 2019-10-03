@@ -1,0 +1,48 @@
+.signin-container { 
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 10%; 
+    align-items: center;
+}
+
+.form-signin { 
+    display: flex; 
+    flex-direction: column;
+    width: 425px; 
+    height: 425px;
+    align-items: center;
+}
+
+
+.form-signin input { 
+    border: solid pink 1px; 
+    width: 425px; 
+    height: 50px; 
+    border-radius: 3px;
+    margin: 10px; 
+}
+
+
+.form-signin label{ 
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.signin-container h2 { 
+    font-size: 25px; 
+    font-weight: bold; 
+    font-family: Helvetica,Arial,sans-serif;
+    padding-bottom: 30px;
+}
+
+.form-signin button { 
+    border: solid pink 1px; 
+    width: 425px; 
+    height: 40px; 
+    text-align: center;
+    background-color: pink;
+    border-radius: 3px;
+    font-family: Helvetica,Arial,sans-serif;
+    color: grey;
+
+}
+

@@ -6,16 +6,18 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS'
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS'
 
 const receiveSessionErrors = errors => { 
+    // debugger
     return ({ 
         type: RECEIVE_SESSION_ERRORS, 
         errors 
     })
 } 
 
-const receiveCurrentUser = CurrentUser => { 
+const receiveCurrentUser = user => { 
+    // debugger
     return ({ 
         type: RECEIVE_CURRENT_USER, 
-        currentUser 
+        user
     });
 } 
 
@@ -26,16 +28,16 @@ const logoutCurrentUser = () => {
 }
 
 export const signupUser = formUser => dispatch => { 
-    signup(formUser).then(user => dispatchEvent(receiveCurrentUser(user)) 
+    return signup(formUser).then(user => dispatch(receiveCurrentUser(user)) 
     ); 
 }
 
 export const loginUser = formUser => dispatch => {
-    login(formUser).then(user => dispatch(receiveCurrentUser(user))
+    return login(formUser).then(user => dispatch(receiveCurrentUser(user))
     ); 
 }
 
 export const logoutUser = () => dispatch => { 
-    logout().then( () => dispatch(logoutCurrentUser())
+    return logout().then( () => dispatch(logoutCurrentUser())
     ); 
 }
