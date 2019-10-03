@@ -11,7 +11,7 @@
     justify-content: space-between; 
     height: 70px; 
     align-items: center;
-    
+    border: solid lightgray 1px;
     /* position: absolute;
     backdrop-filter: blur(7px);
     background-color: rgba(0,0,0,.1);
@@ -38,5 +38,10 @@
 .button-signin { 
     font-size: 15px;
     font-family: Helvetica,Arial,sans-serif;
+    margin-left: 15px; 
+    margin-right: 5px; 
+}
 
+.button-signin:hover { 
+    color: grey; 
 }

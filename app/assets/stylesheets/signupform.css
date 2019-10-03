@@ -23,7 +23,7 @@
 }
 
 .names {
-    
+
 }
 
 
@@ -47,5 +47,8 @@
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: grey;
+}
 
+.form-signup button:hover { 
+    color: grey; 
 }

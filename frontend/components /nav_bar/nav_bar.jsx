@@ -1,11 +1,14 @@
 import React from 'react' ; 
 import {Link} from 'react-router-dom' 
+import Dropdown from '../dropdown/dropdown'
 
 export default ({ currentUser, logoutUser }) => { 
     const display = currentUser ? ( 
         <div>
             {/* need drop down menu for belllow button */}
-            <button onClick={logoutUser}>Log Out</button>
+            {/* <button onClick={logoutUser}>Log Out</button>  */}
+            <Dropdown /> 
+
         </div>
     ) : (
         <div>
