@@ -28,16 +28,16 @@ const logoutCurrentUser = () => {
 }
 
 export const signupUser = formUser => dispatch => { 
-    return signup(formUser).then(user => dispatch(receiveCurrentUser(user)) 
+    return signup(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveSessionErrors(err.responseJSON))
     ); 
 }
 
 export const loginUser = formUser => dispatch => {
-    return login(formUser).then(user => dispatch(receiveCurrentUser(user))
+    return login(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveSessionErrors(err.responseJSON))
     ); 
 }
 
 export const logoutUser = () => dispatch => { 
-    return logout().then( () => dispatch(logoutCurrentUser())
+    return logout().then(() => dispatch(logoutCurrentUser()), err => dispatch(receiveSessionErrors(err.responseJSON))
     ); 
 }

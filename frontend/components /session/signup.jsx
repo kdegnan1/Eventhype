@@ -33,7 +33,6 @@ class Signup extends React.Component {
     }
 
     handleSubmit(e) { 
-        debugger
         e.preventDefault() ; 
         // debugger
         const user = Object.assign({}, this.state); 
@@ -60,6 +59,8 @@ class Signup extends React.Component {
          
                     <button onClick={this.handleSubmit}>Sign Up</button>
                  </form>
+                {this.renderErrors()}
+
             </div>
         );
     }

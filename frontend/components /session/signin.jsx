@@ -16,6 +16,18 @@ class Signin extends React.Component {
         }
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -37,6 +49,8 @@ class Signin extends React.Component {
                     <button onClick={this.handleSubmit}>Get Started</button>
                     <link rel="stylesheet" href=""/>
                 </form>
+                {this.renderErrors()}
+
             </div>
         );
     }
