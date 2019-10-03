@@ -1,11 +1,16 @@
-class SessionsController < ApplicationController 
+class Api::SessionsController < ApplicationController 
 
     def create 
-        user = User.find_by_credentials(params[:user][:email], params[:user][:password])
-        if user
-            login(user) 
-            render `api/users/show`
+        # debugger
+        @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+        # debugger
+        if @user
+            # debugger
+            login(@user) 
+            render 'api/users/show'
+            # debugger
         else 
+            # debugger
             render json: ['Sorry! That was a wrong email/password, please try again.'], status: 401
         end
     end 

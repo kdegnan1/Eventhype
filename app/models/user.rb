@@ -9,12 +9,24 @@ class User < ApplicationRecord
 
     ##FIGVAPER 
     def self.find_by_credentials(email, password) 
+        # debugger
         user = User.find_by(email: email)  
-        return user if user && user.is_password?(password)
+        # debugger
+        return nil unless user 
+
+        if user.is_password?(password) 
+            # debugger
+            return user 
+        else 
+            # debugger
+            return nil
+        end
     end
 
     def is_password?(password) 
-        pw = BCrpyt::Password.new(self.password_digest)
+        # debugger
+        pw = BCrypt::Password.new(self.password_digest)
+        # debugger
        pw.is_password?(password)
     end 
 
@@ -24,7 +36,7 @@ class User < ApplicationRecord
 
     def password=(password)
         @password = password
-        self.password_digest = BCrypt::Password.create(password_digest)
+        self.password_digest = BCrypt::Password.create(password)
     end 
 
     def ensure_session_token

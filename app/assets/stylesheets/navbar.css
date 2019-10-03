@@ -1,0 +1,42 @@
+.logo {
+        font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+        margin: 20px; 
+        font-size: 20px;
+}
+
+.nav-bar { 
+    z-index: 2;
+    color: pink;  
+    display: flex; 
+    justify-content: space-between; 
+    height: 70px; 
+    align-items: center;
+    
+    /* position: absolute;
+    backdrop-filter: blur(7px);
+    background-color: rgba(0,0,0,.1);
+    width: 100%; */
+}
+
+
+
+.top-section { 
+    background-image: url('flame.jpg');
+    width: 100%; 
+    background-size: cover; 
+    height: 500px; 
+    position: absolute; 
+}
+
+.slogan { 
+    color: white; 
+    font-size: 60px; 
+    margin: 20px; 
+    margin-top:100px;
+}
+
+.button-signin { 
+    font-size: 15px;
+    font-family: Helvetica,Arial,sans-serif;
+
+}
