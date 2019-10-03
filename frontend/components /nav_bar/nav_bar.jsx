@@ -6,8 +6,8 @@ export default ({ currentUser, logoutUser }) => {
     const display = currentUser ? ( 
         <div>
             {/* need drop down menu for belllow button */}
-            {/* <button onClick={logoutUser}>Log Out</button>  */}
-            <Dropdown /> 
+            <button onClick={logoutUser}>Log Out</button> 
+            {/* <Dropdown />  */}
 
         </div>
     ) : (
