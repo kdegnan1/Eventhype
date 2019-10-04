@@ -29,7 +29,7 @@
     color: #6f7287; 
     font-size: 16px; 
     font-family: Helvetica,Arial,sans-serif;
-    margin: 10px 0px 0px; 
+    margin-bottom: 30px; 
 }
 
 
@@ -41,7 +41,7 @@
     font-size: 25px; 
     font-weight: bold; 
     font-family: Helvetica,Arial,sans-serif;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .form-signin button { 

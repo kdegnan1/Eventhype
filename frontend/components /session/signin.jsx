@@ -39,14 +39,15 @@ class Signin extends React.Component {
     render() {
         return (
             <div className="signin-container">
+                <i className="far fa-user"></i> 
                 <h2>Welcome back</h2> 
                 <p>Please enter your password to log in.</p>
                 <form className="form-signin">
                     {/* <label>Email</label> */}
-                    <input type="text" value={this.props.email} placeholder="  email" onChange={this.handleInput('email')} />
+                    <input type="text" value={this.props.email} placeholder="  Email address" onChange={this.handleInput('email')} />
 
                     {/* <label>Password</label> */}
-                    <input type="password" value={this.state.password} placeholder="  password" onChange={this.handleInput('password')} />
+                    <input type="password" value={this.state.password} placeholder="  Password" onChange={this.handleInput('password')} />
 
                     <button onClick={this.handleSubmit}>Log In</button>
                     <link rel="stylesheet" href=""/>
