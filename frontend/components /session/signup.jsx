@@ -3,7 +3,7 @@ import React from 'react'
 class Signup extends React.Component { 
     constructor(props) { 
         super(props); 
-        debugger
+        // debugger
             this.state = { 
                 email: props.location.state.email, 
                 fname: '', 
@@ -44,20 +44,21 @@ class Signup extends React.Component {
         // debugger
         return ( 
             <div className="signup-container">
+               
                 <h2>Welcome</h2>
                 <h1>Create an account.</h1>
                 <form className="form-signup">
                     {/* <label>Email</label> */}
-                    <input type="text" value={this.state.email} placeholder="   email" onChange={this.handleInput('email')}/>
+                    <input type="text" value={this.state.email} placeholder="   Email address" onChange={this.handleInput('email')}/>
             <div className="names">
                     {/* <label>First Name</label> */}
-                    <input type="text" value={this.state.fname} placeholder="   first name" onChange={this.handleInput('fname')} />
+                    <input type="text" value={this.state.fname} placeholder="   First name" onChange={this.handleInput('fname')} />
                 
                     {/* <label>Last Name</label> */}
-                    <input type="text" value={this.state.lname} placeholder="   last name" onChange={this.handleInput('lname')} />
+                    <input type="text" value={this.state.lname} placeholder="   Last name" onChange={this.handleInput('lname')} />
             </div>
                     {/* <label>Password</label> */}
-                    <input type="password" value={this.state.password} placeholder="   password" onChange={this.handleInput('password')} />
+                    <input type="password" value={this.state.password} placeholder="   Password" onChange={this.handleInput('password')} />
          
                     <button onClick={this.handleSubmit}>Sign Up</button>
                  </form>
