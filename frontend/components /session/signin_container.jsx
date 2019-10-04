@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import {loginUser} from '../../actions/session_actions'; 
 import Signin from './signin' 
 
-const msp = ({errors}) => { 
+const msp = (state) => { 
     return { 
-        errors: errors.session, 
+        errors: state.errors.session, 
+        email: state.session.email,
         formType: 'login', 
         // navLink: <Link to="/signup">sign up instead</Link>
     }

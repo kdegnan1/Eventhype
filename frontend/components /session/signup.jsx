@@ -3,8 +3,9 @@ import React from 'react'
 class Signup extends React.Component { 
     constructor(props) { 
         super(props); 
+        debugger
             this.state = { 
-                email: '', 
+                email: props.location.state.email, 
                 fname: '', 
                 lname: '', 
                 password: ''
@@ -43,7 +44,8 @@ class Signup extends React.Component {
         // debugger
         return ( 
             <div className="signup-container">
-                <h2>Sign Up</h2>
+                <h2>Welcome</h2>
+                <h1>Create an account.</h1>
                 <form className="form-signup">
                     {/* <label>Email</label> */}
                     <input type="text" value={this.state.email} placeholder="   email" onChange={this.handleInput('email')}/>

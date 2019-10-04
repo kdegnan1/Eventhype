@@ -5,6 +5,7 @@
     align-items: center;
 }
 
+
 .form-signin { 
     display: flex; 
     flex-direction: column;
@@ -20,6 +21,15 @@
     height: 50px; 
     border-radius: 3px;
     margin: 10px; 
+    padding-left: 10px;  
+
+}
+
+.signin-container p { 
+    color: #6f7287; 
+    font-size: 16px; 
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 10px 0px 0px; 
 }
 
 
@@ -35,6 +45,49 @@
 }
 
 .form-signin button { 
+    border: solid pink 1px; 
+    width: 425px; 
+    height: 40px; 
+    text-align: center;
+    background-color: pink;
+    border-radius: 3px;
+    font-family: Helvetica,Arial,sans-serif;
+    color: grey;
+
+}
+
+.email-container { 
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 10%; 
+    align-items: center;
+}
+
+.form-email { 
+    display: flex; 
+    flex-direction: column;
+    width: 425px; 
+    height: 425px;
+    align-items: center;
+}
+
+.form-email input { 
+    border: solid pink 1px; 
+    width: 425px; 
+    height: 50px; 
+    border-radius: 3px;
+    margin: 10px; 
+    padding-left: 10px;  
+}
+
+.email-container h2 { 
+    font-size: 25px; 
+    font-weight: bold; 
+    font-family: Helvetica,Arial,sans-serif;
+    padding-bottom: 30px;
+}
+
+.form-email button { 
     border: solid pink 1px; 
     width: 425px; 
     height: 40px; 
