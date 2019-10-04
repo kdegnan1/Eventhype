@@ -9,8 +9,8 @@
     display: flex; 
     flex-direction: column;
     width: 425px; 
-    height: 425px;
     align-items: center;
+    margin-bottom: 10px; 
 }
 
 
@@ -28,6 +28,11 @@
 
 }
 
+.signup-container img {
+    width: 60px;
+    height: 80px;
+}
+
 
 .form-signup label{ 
     font-family: Helvetica,Arial,sans-serif;
@@ -38,6 +43,13 @@
     font-weight: bold; 
     font-family: Helvetica,Arial,sans-serif;
     padding-bottom: 30px;
+}
+
+.signup-container p { 
+     color: #6f7287; 
+    font-size: 16px; 
+    font-family: Helvetica,Arial,sans-serif;
+    margin-bottom: 30px; 
 }
 
 .form-signup button { 
@@ -53,4 +65,9 @@
 
 .form-signup button:hover { 
     color: grey; 
+}
+
+
+.autherrors { 
+    color: red; 
 }
