@@ -3,8 +3,9 @@ import React from 'react'
 class Signin extends React.Component {
     constructor(props) {
         super(props);
+        // debugger
         this.state = {
-            email: '',
+            email: props.email,
             password: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,15 +39,16 @@ class Signin extends React.Component {
     render() {
         return (
             <div className="signin-container">
-                <h2>Let's get started</h2>
+                <h2>Welcome back</h2> 
+                <p>Please enter your password to log in.</p>
                 <form className="form-signin">
                     {/* <label>Email</label> */}
-                    <input type="text" value={this.state.email} placeholder="  email" onChange={this.handleInput('email')} />
+                    <input type="text" value={this.props.email} placeholder="  email" onChange={this.handleInput('email')} />
 
                     {/* <label>Password</label> */}
                     <input type="password" value={this.state.password} placeholder="  password" onChange={this.handleInput('password')} />
 
-                    <button onClick={this.handleSubmit}>Get Started</button>
+                    <button onClick={this.handleSubmit}>Log In</button>
                     <link rel="stylesheet" href=""/>
                 </form>
                 {this.renderErrors()}

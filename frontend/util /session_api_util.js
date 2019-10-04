@@ -26,3 +26,14 @@ export const logout = () => {
         })
     ); 
 }
+export const finduser = (email) => { 
+    // debugger
+    return( 
+        $.ajax({ 
+            method: 'GET',
+            url: '/api/users/find_user', 
+            // data: {email}
+            data: {user: email}
+        })
+    )
+}

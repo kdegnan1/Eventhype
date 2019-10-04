@@ -1,9 +1,10 @@
-import { signup, login, logout } from '../util /session_api_util'
+import { signup, login, logout, finduser } from '../util /session_api_util'
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER'
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS'
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS'
+export const RECEIVE_EMAIL = 'RECEIVE_EMAIL'
 
 const receiveSessionErrors = errors => { 
     // debugger
@@ -27,6 +28,14 @@ const logoutCurrentUser = () => {
     });
 }
 
+const receiveEmail = (email) => { 
+    debugger
+    return({ 
+        type: RECEIVE_EMAIL, 
+        email
+    })
+}
+
 export const signupUser = formUser => dispatch => { 
     return signup(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveSessionErrors(err.responseJSON))
     ); 
@@ -41,3 +50,9 @@ export const logoutUser = () => dispatch => {
     return logout().then(() => dispatch(logoutCurrentUser()), err => dispatch(receiveSessionErrors(err.responseJSON))
     ); 
 }
+
+export const findUser = (email) => dispatch => { 
+    return finduser(email).then((emailFound) => {
+       return dispatch(receiveEmail(emailFound))
+    }); 
+ }
