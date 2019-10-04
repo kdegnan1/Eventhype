@@ -10,8 +10,8 @@
     display: flex; 
     flex-direction: column;
     width: 425px; 
-    height: 425px;
     align-items: center;
+    margin-bottom: 10px; 
 }
 
 
@@ -36,6 +36,11 @@
 .form-signin label{ 
     font-family: Helvetica,Arial,sans-serif;
 }
+.signin-container img {
+    width: 60px;
+    height: 80px;
+}
+
 
 .signin-container h2 { 
     font-size: 25px; 
@@ -61,6 +66,12 @@
     flex-direction: column; 
     margin-top: 10%; 
     align-items: center;
+}
+
+.email-container img { 
+    width: 70px;
+    height: 65px;
+    margin-bottom: 10px;
 }
 
 .form-email { 
@@ -96,6 +107,17 @@
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: grey;
+    margin-bottom: 5px; 
+}
 
+.demo { 
+    border: solid pink 1px; 
+    width: 425px; 
+    height: 40px; 
+    text-align: center;
+    background-color: palevioletred;
+    border-radius: 3px;
+    font-family: Helvetica,Arial,sans-serif;
+    color: grey;
 }
 

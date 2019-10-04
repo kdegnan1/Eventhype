@@ -8,6 +8,7 @@ class FindEmail extends React.Component {
             email: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.demoLogin = this.demoLogin.bind(this); 
     }
 
     handleInput(type) {
@@ -33,13 +34,20 @@ class FindEmail extends React.Component {
         )
 }
 
+    demoLogin(e) { 
+        e.preventDefault(); 
+        this.props.loginUser({ email: 'katherine', password: 'password' }).then(() => this.props.history.push('/'))
+    }
+
     render() { 
         return ( 
             <div className="email-container">
+                <img className="elogo" src={window.elogoURL} />
                 <h2>Let's get started</h2>
                 <form className="form-email">
-                    <input type="text" value={this.state.email} placeholder="  email" onChange={this.handleInput('email')}  />
+                    <input type="text" value={this.state.email} placeholder="  Email address" onChange={this.handleInput('email')}  />
                     <button onClick={this.handleSubmit}>Get Started</button>
+                    <button onClick={this.demoLogin}className="demo">Demo User</button>
                 </form>
             </div>
         )

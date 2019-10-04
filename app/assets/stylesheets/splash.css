@@ -1,0 +1,21 @@
+
+.slogan-madefor { 
+    font-size: 110px; 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-weight: 400; 
+    color: white; 
+    margin-left: 15%; 
+    margin-top: 3%; 
+    opacity: 0.8;
+}
+
+.slogan-thosewhodo { 
+    font-size: 110px; 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    color: white; 
+    font-weight: bold; 
+    margin-left: 50%; 
+    margin-top: 8%; 
+    /* opacity: 0.90; */
+
+}

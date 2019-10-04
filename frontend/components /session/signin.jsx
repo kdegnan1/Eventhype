@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 class Signin extends React.Component {
     constructor(props) {
@@ -19,7 +21,7 @@ class Signin extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="autherrors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -39,7 +41,7 @@ class Signin extends React.Component {
     render() {
         return (
             <div className="signin-container">
-                <i className="far fa-user"></i> 
+                 <img className="userpic" src={window.imagesURL} />
                 <h2>Welcome back</h2> 
                 <p>Please enter your password to log in.</p>
                 <form className="form-signin">

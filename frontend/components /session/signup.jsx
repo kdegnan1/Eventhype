@@ -23,9 +23,9 @@ class Signup extends React.Component {
 
     renderErrors() { 
         return ( 
-            <ul>
+            <ul className="errors-container">
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="autherrors" key={`error-${i}`}>
                         {error} 
                     </li>
                 ))}
@@ -44,9 +44,9 @@ class Signup extends React.Component {
         // debugger
         return ( 
             <div className="signup-container">
-               
+                <img className="userpic" src={window.imagesURL} />
                 <h2>Welcome</h2>
-                <h1>Create an account.</h1>
+                <p>Create an account.</p>
                 <form className="form-signup">
                     {/* <label>Email</label> */}
                     <input type="text" value={this.state.email} placeholder="   Email address" onChange={this.handleInput('email')}/>
