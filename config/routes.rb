@@ -7,8 +7,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
 
     get '/users/find_user', to: 'users#find_user'
+    resources :events, only: [:create, :update, :destroy, :index, :show]
   end
-
-  
 
 end
