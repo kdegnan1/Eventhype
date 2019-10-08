@@ -1,0 +1,50 @@
+//fetchevent 
+export const fetchEvents = () => { 
+    return (
+        $.ajax({
+            method: 'GET',
+            url: `/api/events`, 
+        })
+    )
+}
+
+export const fetchEvent = id => { 
+    return ( 
+        $.ajax({ 
+            method: 'GET', 
+            url: `/api/events/${id}`,
+            data: {event: {id}}
+        })
+    )
+}
+
+export const createEvent = (formData) => { 
+    return (
+        $.ajax({
+            method: 'POST',
+            url: `/api/events`, 
+            data: formData,
+            content_type: false,
+            process_data: false
+        })
+    )
+}
+
+export const updateEvent = (formData) => { 
+    return (
+        $.ajax({
+            method: 'PATCH',
+            url: `/api/events/${formData.get('event[id]')}`,  //append event.id 
+            data: formDAta
+        })
+    )
+}
+
+export const deleteEvent = (id) =>{ 
+    return (
+        $.ajax({
+            method: 'DELETE',
+            url: `/api/events/${id}`
+        })
+    )
+}
