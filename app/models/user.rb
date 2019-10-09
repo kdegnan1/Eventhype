@@ -8,8 +8,8 @@ class User < ApplicationRecord
     ##create associations ! 
 
     has_many :events, 
-    foreign_key: :user_id, 
-    class_name: :Events
+    foreign_key: :creator_id, 
+    class_name: :Event
 
     ##FIGVAPER 
     def self.find_by_credentials(email, password) 

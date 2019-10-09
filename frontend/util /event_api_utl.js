@@ -24,8 +24,8 @@ export const createEvent = (formData) => {
             method: 'POST',
             url: `/api/events`, 
             data: formData,
-            content_type: false,
-            process_data: false
+            contentType: false,
+            processData: false
         })
     )
 }

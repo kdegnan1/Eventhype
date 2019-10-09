@@ -1,7 +1,10 @@
 class Api::EventsController < ApplicationController 
 
+    before_action :ensure_logged_in, only: [:create, :update, :destroy]
+
     def create
-        @event = Event.new(event_params)
+        debugger
+        @event = current_user.events.new(event_params) 
         if @event.save 
             render :show 
         else 
@@ -46,6 +49,6 @@ class Api::EventsController < ApplicationController
     private 
 
     def event_params
-        params.require(:events).permit(:title, :location, :description, :event_type, :price, :start_date, :start_time, :end_date, :end_time, :organizer, :photo)
+        params.require(:event).permit(:title, :location, :description, :event_type, :price, :start_date, :start_time, :end_date, :end_time, :organizer, :photo)
     end
 end

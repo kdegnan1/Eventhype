@@ -13,7 +13,7 @@ class EventForm extends React.Component {
                 end_date: '', 
                 end_time: '', 
                 organizer: '', 
-                event_type: '', 
+                event_type:'', 
                 price: '', 
                 photoFile: null 
             }
@@ -40,6 +40,8 @@ class EventForm extends React.Component {
         formData.append('event[end_time]', this.state.end_time)
         formData.append('event[price]', this.state.price)
         formData.append('event[photo]', this.state.photoFile) 
+        formData.append('event[organizer]', this.state.organizer) 
+        formData.append('event[event_type]', this.state.event_type) 
         this.props.createEvent(formData).then(() => this.props.history.push('/'))
 
     }
@@ -48,48 +50,64 @@ class EventForm extends React.Component {
         this.setState({photoFile: e.currentTarget.files[0]}); 
     }
 
+    componentDidMount() { 
+        window.scrollTo(0,0); 
+    }
+
     render() { 
         return ( 
             <div className="create-event-container">
-                <h2>Event Details</h2>
-                <form className="create-event-form">
-                    <label>Event Title</label>
-                    <input type="text" value={this.state.title} placeholder="Title" onChange={this.handleInput('title')}/>
-                    
-                    <label>Location</label>
-                    <input type="text" value={this.state.location} placeholder="Venue or address" onChange={this.handleInput('location')} />
-                    <div className="date-time"> 
-                        <label>Start</label>
-                        <input type="text" placeholder="10/01/2019" onChange={this.handleInput('start_date')}/>
-                        <input type="text" placeholder="07:00pm" onChange={this.handleInput('start_time')}/>
-                        
-                        <label>End</label>
-                        <input type="text" placeholder="10/12/2019" onChange={this.handleInput('end_date')}/>
-                        <input type="text" placeholder="10:00pm" onChange={this.handleInput('end_time')}/>
+                <div className="banner"> 
+                <p>Create An Event</p>
+                <button onClick={this.handleSubmit}>Publish</button>
+                </div>
+                <nav className="bar"></nav>
+                <div className="backgroud-create-form">
+                    <div className="title">
+                        <span className="num">1</span><h2>Event Details</h2>
                     </div>
-                    <label >Event Description</label>
-                    <input type="text" value={this.state.description} placeholder="Description" onChange={this.handleInput('description')} />
-                    
-                    <label>Organizer Name</label>
-                    <input type="text" value={this.state.organizer} placeholder="Organizer" onChange={this.handleInput('organizer')}/>
+                    <form className="create-event-form">
 
-                    <label>Price</label>
-                    <input type="text" value={this.state.price} placeholder="Price" onChange={this.handleInput('price')}/>
+                        <label className="title-labels">Event Title</label>
+                        <input className="long-input" type="text" value={this.state.title} placeholder="   Give it a short distinct name" onChange={this.handleInput('title')}/>
+                        
+                        <label className="title-labels">Location</label>
+                        <input className="long-input" type="text" value={this.state.location} placeholder="   Venue or address" onChange={this.handleInput('location')} />
+                        
+                        <div className="date-time"> 
+                            <label>Start</label>  <label>End</label>
+                            <br/>
+                            <input type="text" placeholder="   10/01/2019" onChange={this.handleInput('start_date')}/>
+                            <input type="text" placeholder="   07:00pm" onChange={this.handleInput('start_time')}/>
+                        
+                            <input type="text" placeholder="   10/12/2019" onChange={this.handleInput('end_date')}/>
+                            <input type="text" placeholder="   10:00pm" onChange={this.handleInput('end_time')}/>
+                        </div>
 
-                    <select onChange={this.handleInput('event_type')}>
-                        <option value="Type">Type</option>
-                        <option key={1}>Concert</option>
-                        <option key={2}>Cooking Class</option>
-                        <option key={3}>Festival</option>
-                        <option key={4}>Conference</option>
-                        <option key={5}>Dinner</option>
-                        <option key={6}>Sport Event</option>
+                        <label >Event Description</label>
+                        <input className="desc-input" type="text" value={this.state.description} placeholder="   " onChange={this.handleInput('description')} />
+                        
+                        <label>Organizer Name</label>
+                        <input className="organizer-input" type="text" value={this.state.organizer} placeholder="   Organizer" onChange={this.handleInput('organizer')}/>
+
+                        <label>Price</label>
+                        <input className="price-input" type="text" value={this.state.price} placeholder="   Price" onChange={this.handleInput('price')}/>
+
+                        <label>Select Type of Event</label>
+                        <select onChange={this.handleInput('event_type')}>
+                            <option value="Type">Type</option>
+                            <option key={1}>Concert</option>
+                            <option key={2}>Cooking Class</option>
+                            <option key={3}>Festival</option>
+                            <option key={4}>Conference</option>
+                            <option key={5}>Dinner</option>
+                            <option key={6}>Sport Event</option>
                         </select>
 
-                    <input type="file" onChange={this.handleFile}/>
+                        <input className="input-image" type="file" onChange={this.handleFile}/>
 
-                        <button onClick={this.handleSubmit}>Make Your Event Live</button>
-                </form>
+                    </form>
+                </div>
             </div>
         )
     }

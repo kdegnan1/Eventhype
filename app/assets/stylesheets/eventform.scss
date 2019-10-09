@@ -1,0 +1,135 @@
+.create-event-container { 
+    // font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #39364F;
+
+}
+
+.banner { 
+    font-family: 'Montserrat', sans-serif;
+    width: 100%; 
+    height: 110px; 
+    // margin-top: 62px; 
+    // border-bottom: solid lightgray 1px; 
+    align-items: center; 
+    justify-content: space-between; 
+    display: flex; 
+    color: #1e0a3c;
+    font-size: 24px; 
+    margin-left: 24px; 
+    font-weight: 400; 
+}
+
+.banner button { 
+    margin-right: 100px; 
+    font-size: 15px; 
+    height: 45px;
+    width: 112px;
+    border-radius: 5px; 
+    background-color: #d1400c; 
+    color: white; 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    text-align: center; 
+
+}
+
+.title{ 
+    display: flex; 
+    margin-left: 275px; 
+    margin-right: 265px; 
+    margin-top: 20px; 
+    border-bottom: solid lightgray 1px; 
+}
+
+.title h2 { 
+    font-size: 21px; 
+    color: #39364F;
+    margin-left: 10px; 
+    margin-top: 12px; 
+    // font-weight: 550; 
+}
+
+.num { 
+    width: 50px; 
+    height: 50px;
+    background-color: #3659E3; 
+    color: white; 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-size: 35px; 
+    text-align: center; 
+}
+
+.bar { 
+    width: 100%; 
+    height: 50px;
+    display: flex; 
+    background-color: #4b4d63; 
+}
+
+.create-event-form { 
+    margin-left: 275px; 
+    margin-right: 425px; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.create-event-form label { 
+    font-size: 15px; 
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+}
+
+.create-event-form input { 
+    // height: 50px;
+    border: solid lightgray 1px; 
+    border-radius: 3px; 
+}
+
+.long-input { 
+    width: 690px;
+    height: 50px;
+}
+
+.date-time input { 
+    width: 130px;
+    height: 50px;
+    margin-right: 20px; 
+}
+
+.date-time label{ 
+    margin-right: 267px; 
+    margin-top: 20px; //notworking
+    margin-bottom: 10px; //not working
+}
+
+//trying to make background light grey below 
+// .background-create-form { 
+//     background-color: red; 
+// }
+
+.desc-input { 
+    height: 180px;
+}
+
+.organizer-input { 
+    height: 50px;
+    width: 200px;
+}
+
+.price-input { 
+    height: 50px;
+    width: 200px;
+}
+
+.create-event-form select { 
+    width: 200px;
+    margin-bottom: 20px; 
+}
+
+.input-image { 
+    border: solid white 1px; 
+}
+
+.create-event-form button { 
+
+}
