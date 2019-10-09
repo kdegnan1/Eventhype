@@ -11,7 +11,7 @@ Event.destroy_all
 
 demouser = User.create!(email: 'katherine', password: 'password', fname: 'kat', lname:"degnan")
 
-def event 
+def event1
     {
         title: "Dillon Francis", 
         location: "Great Hall - Avant Garder", 
@@ -26,21 +26,133 @@ def event
     }
 end
 
-def event 
+def event2
     {
         title: "", 
         location: "", 
         description: "", 
-        event_type: "Concert", 
-        price: "$39.99 - $59.99", 
-        organizer: "Avant Gardner", 
-        start_date: "10/12/2019", 
-        start_time: "10:00pm", 
-        end_date: "10/13/2019", 
-        end_time: "04:00am", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
 
     }
 end  
 
-Rave = Event.create!()
+def event3 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+def event4 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+def event5 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+def event6 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+def event7 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+def event8 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+def event9 
+    {
+        title: "", 
+        location: "", 
+        description: "", 
+        event_type: "", 
+        price: "", 
+        organizer: "", 
+        start_date: "", 
+        start_time: "", 
+        end_date: "", 
+        end_time: "", 
+
+    }
+end  
+
+Rave = Event.create!(event1()).photo.attach(io: , filename: '')
 
