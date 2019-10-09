@@ -18,7 +18,7 @@
 
 
 .form-signin input { 
-    border: solid pink 1px; 
+    border: solid grey 1px; 
     width: 320px; 
     height: 50px; 
     border-radius: 3px;
@@ -52,11 +52,11 @@
 }
 
 .form-signin button { 
-    border: solid pink 1px; 
+    // border: solid pink 1px; 
     width: 320px; 
     height: 40px; 
     text-align: center;
-    background-color: pink;
+    background-color: #d1400c;
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: grey;
@@ -86,7 +86,7 @@
 }
 
 .form-email input { 
-    border: solid pink 1px; 
+    border: solid grey 1px; 
     width: 320px; 
     height: 50px; 
     border-radius: 3px;
@@ -102,11 +102,11 @@
 }
 
 .form-email button { 
-    border: solid pink 1px; 
+    // border: solid  #d1400c 1px; 
     width: 320px; 
     height: 40px; 
     text-align: center;
-    background-color: pink;
+    background-color: #d1400c;
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: grey;
@@ -114,11 +114,11 @@
 }
 
 .demo { 
-    border: solid pink 1px; 
+    // border: solid pink 1px; 
     width: 320px; 
     height: 40px; 
     text-align: center;
-    background-color: palevioletred;
+    background-color: green;
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: grey;
