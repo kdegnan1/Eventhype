@@ -22,6 +22,16 @@
     border-bottom: solid lightgrey 1px; 
 }
 
+.bar-show button { 
+    margin-left: 730px; 
+    height: 45px;
+    width: 320px; 
+    background-color: #428549; 
+    border-radius: 4px; 
+    text-align: center; 
+    color: white; 
+}
+
 .event-info { 
     display: flex; 
     background-color: #fbfbfc; 
