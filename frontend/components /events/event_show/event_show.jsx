@@ -37,7 +37,9 @@ class EventShow extends React.Component {
                             photo = {this.props.event.photoUrl}
                             price={this.props.event.price}
                         />
-                        <div className="bar-show"></div>
+                        <div className="bar-show">
+                            <button> Register </button>
+                        </div>
                         <BodyDesc 
                             start_date = {this.props.event.start_date}
                             start_time = {this.props.event.start_time}
