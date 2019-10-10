@@ -63,7 +63,7 @@ STRICT DRESS CODE POLICY: -Gentlemen: Shoes, Button down shirts, and jeans are a
     }
 end  
 
-Rooftop = Event.create!(event2()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images" "rooftop.jpg")) , filename: 'rooftop.jpg')
+Rooftop = Event.create!(event2()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "rooftop.jpg")) , filename: 'rooftop.jpg')
 
 
 def event3 
