@@ -35,7 +35,7 @@ def event1
     }
 end
 
-Rave = Event.create!(event1()).photo.attach(io: File.open("app/assets/images/Dillon.jpg") , filename: 'Dillon.jpg')
+Rave = Event.create!(event1()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "Dillon.jpg")) , filename: 'Dillon.jpg')
 # file = EzDownload.open('https://eventhype-dev.s3.us-east-2.amazonaws.com/Dillon.jpg')
 # Rave.photo.attach(io: file, filename: 'Dillon.jpg')
 # 
@@ -63,7 +63,7 @@ STRICT DRESS CODE POLICY: -Gentlemen: Shoes, Button down shirts, and jeans are a
     }
 end  
 
-Rooftop = Event.create!(event2()).photo.attach(io: File.open("app/assets/images/rooftop.jpg") , filename: 'rooftop.jpg')
+Rooftop = Event.create!(event2()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images" "rooftop.jpg")) , filename: 'rooftop.jpg')
 
 
 def event3 
@@ -89,7 +89,7 @@ Enjoy the festivities at our 3,500 square foot venue which features amazing view
     }
 end  
 
-Oktober = Event.create!(event3()).photo.attach(io: File.open("app/assets/images/oktoberfest.jpg") , filename: 'oktoberfest.jpg')
+Oktober = Event.create!(event3()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "oktoberfest.jpg")) , filename: 'oktoberfest.jpg')
 
 
 def event4 
@@ -109,7 +109,7 @@ def event4
     }
 end  
 
-Sweets = Event.create!(event4()).photo.attach(io: File.open("app/assets/images/sweets.jpg") , filename: 'sweets.jpg')
+Sweets = Event.create!(event4()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "sweets.jpg")) , filename: 'sweets.jpg')
 
 
 
@@ -142,7 +142,7 @@ NO REFUNDS - Event is rain or shine",
     }
 end  
 
-Above = Event.create!(event5()).photo.attach(io: File.open("app/assets/images/Above.jpg") , filename: 'Above.jpg')
+Above = Event.create!(event5()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "Above.jpg")) , filename: 'Above.jpg')
 
 
 def event6 
@@ -166,7 +166,7 @@ Again this year, we've partnered Lyft to encourage responsible transportation ch
     }
 end  
 
-Wine = Event.create!(event6()).photo.attach(io: File.open("app/assets/images/wolfer.jpg") , filename: 'wolfer.jpg')
+Wine = Event.create!(event6()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "wolfer.jpg")) , filename: 'wolfer.jpg')
 
 
 def event7 
@@ -204,7 +204,7 @@ Very limited amount of earlybird tickets available",
     }
 end  
 
-Halloween = Event.create!(event7()).photo.attach(io: File.open("app/assets/images/halloween.jpg") , filename: 'halloween.jpg')
+Halloween = Event.create!(event7()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "halloween.jpg")) , filename: 'halloween.jpg')
 
 
 def event8 
@@ -224,7 +224,7 @@ def event8
     }
 end  
 
-Alice = Event.create!(event8()).photo.attach(io: File.open("app/assets/images/Alice.jpg") , filename: 'Alice.jpg')
+Alice = Event.create!(event8()).photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "Alice.jpg")) , filename: 'Alice.jpg')
 
 
 # def event9 
