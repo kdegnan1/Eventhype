@@ -6,7 +6,9 @@ export default ({ currentUser, logoutUser }) => {
     const display = currentUser ? ( 
         <div>
             {/* need drop down menu for belllow button */}
+            <Link className="button-create" to='/create_event'>Create Event</Link> 
             <button onClick={logoutUser}>Log Out</button> 
+            
             {/* <Dropdown />  */}
 
         </div>
@@ -14,6 +16,7 @@ export default ({ currentUser, logoutUser }) => {
         <div>
             {/* <Link className="button-signin" to='/signup'>Sign Up </Link> */}
             <Link className="button-signin" to='/signin'>Sign In</Link>
+            
         </div>
     ); 
 

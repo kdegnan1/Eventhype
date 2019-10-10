@@ -29,7 +29,7 @@
 
 .signup-container img {
     width: 60px;
-    height: 80px;
+    height: 60px;
 }
 
 
@@ -41,21 +41,21 @@
 }
 
 .signup-container p { 
-     color: #6f7287; 
+    color: #6f7287; 
     font-size: 16px; 
     font-family: Helvetica,Arial,sans-serif;
     margin-bottom: 30px; 
 }
 
 .form-signup button { 
-    border: solid pink 1px; 
+    // border: solid pink 1px; 
     width: 320px; 
     height: 40px; 
     text-align: center;
-    background-color: #d1400c;
+    background-color: #eb5436; 
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
-    color: grey;
+    color: white;
 }
 
 .form-signup button:hover { 

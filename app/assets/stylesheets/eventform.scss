@@ -71,6 +71,7 @@
     margin-right: 425px; 
     display: flex; 
     flex-direction: column; 
+    padding-bottom: 200px; 
 }
 
 .create-event-form label { 
@@ -81,22 +82,33 @@
 
 .create-event-form input { 
     // height: 50px;
-    border: solid lightgray 1px; 
+    // border: solid lightgray 1px; 
     border-radius: 3px; 
 }
 
 .long-input { 
+    border: solid lightgray 1px; 
     width: 690px;
     height: 50px;
 }
 
+.long-input-location { 
+    border: solid lightgray 1px; 
+    width: 690px;
+    height: 50px;
+    margin-bottom: 20px; 
+}
+
 .date-time input { 
+    border: solid lightgray 1px; 
     width: 130px;
     height: 50px;
     margin-right: 20px; 
+    margin-top: 10px; 
 }
 
 .date-time label{ 
+    padding-top: 10px; 
     margin-right: 267px; 
     margin-top: 20px; //notworking
     margin-bottom: 10px; //not working
@@ -108,15 +120,18 @@
 // }
 
 .desc-input { 
+    border: solid lightgray 1px; 
     height: 180px;
 }
 
 .organizer-input { 
+    border: solid lightgray 1px; 
     height: 50px;
-    width: 200px;
+    width: 300px;
 }
 
 .price-input { 
+     border: solid lightgray 1px; 
     height: 50px;
     width: 200px;
 }
@@ -127,7 +142,7 @@
 }
 
 .input-image { 
-    border: solid white 1px; 
+
 }
 
 .create-event-form button { 

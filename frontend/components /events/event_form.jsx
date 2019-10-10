@@ -73,8 +73,8 @@ class EventForm extends React.Component {
                         <label className="title-labels">Event Title</label>
                         <input className="long-input" type="text" value={this.state.title} placeholder="   Give it a short distinct name" onChange={this.handleInput('title')}/>
                         
-                        <label className="title-labels">Location</label>
-                        <input className="long-input" type="text" value={this.state.location} placeholder="   Venue or address" onChange={this.handleInput('location')} />
+                        <label className="title-label">Location</label>
+                        <input className="long-input-location" type="text" value={this.state.location} placeholder="   Venue or address" onChange={this.handleInput('location')} />
                         
                         <div className="date-time"> 
                             <label>Start</label>  <label>End</label>
@@ -99,10 +99,10 @@ class EventForm extends React.Component {
                         <select onChange={this.handleInput('event_type')}>
                             <option value="Type">Type</option>
                             <option key={1}>Concert</option>
-                            <option key={2}>Cooking Class</option>
+                            <option key={2}>Brunch</option>
                             <option key={3}>Festival</option>
-                            <option key={4}>Conference</option>
-                            <option key={5}>Dinner</option>
+                            <option key={4}>Nightlife</option>
+                            <option key={5}>Food</option>
                             <option key={6}>Sport Event</option>
                         </select>
 
