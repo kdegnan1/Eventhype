@@ -1,0 +1,85 @@
+.index-background { 
+     background-color: #fbfbfc; 
+
+}
+
+.index-container { 
+    margin-top: 40%; 
+    margin-left: 114px; 
+    margin-right: 114px; 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    color: #39364e;
+}
+
+.events-grid { 
+    margin-top: 6%; 
+    display: flex;
+    // flex-wrap: default;  
+}
+
+.rows { 
+    display: flex; 
+    flex-wrap: wrap; 
+    // justify-content: space-between; 
+}
+
+
+.index-header { 
+    display: flex; 
+    font-size: 30px; 
+    font-weight: 800; 
+}
+
+.popular { 
+    color: #39364e; 
+}
+
+.index-header .newyork  { 
+    width: 400px; 
+    padding-left: 10px; 
+    color: #3d63fc; 
+    border-bottom: solid lightgray 2px; 
+}
+
+.index-item { 
+    height: 300px; 
+    width: 280px; 
+    margin-bottom: 20px; 
+    background-color: white; 
+    margin-right: 20px; 
+}
+
+.index-photo{ 
+    height: 140px; 
+    width: 280px; 
+}
+
+.index-item-content { 
+    background-color: white; 
+    padding: 20px; 
+    
+}
+
+.index-item:hover { 
+    box-shadow: 2px 2px 2px 2px lightgrey; 
+}
+
+.index-item-date { 
+    color: #d1410c; 
+    font-size: 14px; 
+    font-weight: 500; 
+}
+
+.index-item-title { 
+    color: #39364e; 
+    font-size: 20px; 
+    font-weight: 700; 
+    padding-top: 4px; 
+    padding-bottom:4px; 
+}
+
+.index-item-location { 
+    color: #6f7287; 
+    font-size: 14px; 
+    font-weight: 400; 
+}

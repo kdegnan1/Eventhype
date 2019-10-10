@@ -3,7 +3,7 @@ class Api::EventsController < ApplicationController
     before_action :ensure_logged_in, only: [:create, :update, :destroy]
 
     def create
-        debugger
+        # debugger
         @event = current_user.events.new(event_params) 
         if @event.save 
             render :show 

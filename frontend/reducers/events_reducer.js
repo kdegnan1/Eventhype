@@ -4,8 +4,10 @@ const eventsReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
         case RECEIVE_EVENT: 
-            return Object.assign({}, state,{[action.event.id]: action.event} )
+        // debugger
+            return Object.assign({}, state,{[action.event.event.id]: action.event.event} )
         case RECEIVE_EVENTS: 
+        // debugger
             return action.events 
         default: 
             return state 

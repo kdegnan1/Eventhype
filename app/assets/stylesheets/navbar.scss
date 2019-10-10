@@ -10,15 +10,20 @@
     color: #eb5436;  
     display: flex; 
     justify-content: space-between; 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
     height: 70px; 
     align-items: center;
-    border: solid lightgray 1px;
+    border-bottom: solid lightgray 1px;
+    margin-right: 20px; 
     /* position: absolute;
     backdrop-filter: blur(7px);
     background-color: rgba(0,0,0,.1);
     width: 100%; */
 }
 
+.button-create { 
+    padding-right: 20px; 
+}
 
 
 .top-section { 
@@ -40,6 +45,7 @@
     font-size: 17px;
     font-family: Helvetica,Arial,sans-serif;
     margin-right: 15px; 
+    // margin-left: 15px; 
 }
 
 
