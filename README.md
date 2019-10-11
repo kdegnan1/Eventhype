@@ -1,24 +1,14 @@
-# README
+#EVENTHYPE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Eventhype is a clone of the website Eventbrite. It is a website where you can browse events and buy tickets/register to events in your area. If you create an account you can create/update/delete events which people can buy tickets for. You can also bookmark events to be saved. 
 
-Things you may want to cover:
+Link: https://eventhype.herokuapp.com/#/
 
-* Ruby version
+##How it works 
+To create this clone I used Rails as the backend and React-Redux for the frontend. 
 
-* System dependencies
+##Config
 
-* Configuration
+##What is left to work on
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
