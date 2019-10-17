@@ -77,10 +77,12 @@ class Signup extends React.Component {
                 <p>Create an account.</p>
                 <form className="form-signup">
                     <input type="text" value={this.state.email} placeholder="   Email address" onChange={this.handleInput('email')}/>
+                   
                     <input className ={'signup-input-${fnameClassError}'} type="text" value={this.state.fname} placeholder="   First name" onChange={this.handleInput('fname')} />
                     {fnameError}
                     <input className={'signup-input-${lnameClassError}'} type="text" value={this.state.lname} placeholder="   Last name" onChange={this.handleInput('lname')} />
                     {lnameError}
+             
                     <input className={'signup-input-${passwordClassError}'} type="password" value={this.state.password} placeholder="   Password" onChange={this.handleInput('password')} />
                     {passwordError}
                     <button onClick={this.handleSubmit}>Sign Up</button>
