@@ -1,7 +1,7 @@
 import React from 'react' 
 import {connect} from 'react-redux' 
 import EventShow from './event_show'
-import {fetchEvent} from '../../../actions/event_actions' 
+import {fetchEvent, deleteEvent} from '../../../actions/event_actions' 
 
 const msp = (state, ownProps) => { 
     // debugger
@@ -13,7 +13,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => { 
     return { 
-        fetchEvent: (id) => dispatch(fetchEvent(id)) 
+        fetchEvent: (id) => dispatch(fetchEvent(id)),
+        deleteEvent: (id) => dispatch(deleteEvent(id))
     }
 }
 

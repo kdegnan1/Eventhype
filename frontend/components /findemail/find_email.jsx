@@ -44,6 +44,7 @@ class FindEmail extends React.Component {
             <div className="email-container">
                 <img className="elogo" src={window.elogoURL} />
                 <h2>Let's get started</h2>
+                <p>Use email to get started.</p>
                 <form className="form-email">
                     <input type="text" value={this.state.email} placeholder="  Email address" onChange={this.handleInput('email')}  />
                     <button onClick={this.handleSubmit}>Get Started</button>

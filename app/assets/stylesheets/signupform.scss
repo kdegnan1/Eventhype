@@ -17,12 +17,17 @@
 
 
 .form-signup input { 
-    border: solid grey 1px; 
-    width: 320px; 
+    border: solid lightgray 1px; 
+    width: 300px; 
     height: 50px; 
-    border-radius: 3px;
     margin: 4px; 
     padding-left: 10px;  
+    margin-bottom: 15px; 
+    font-size: 12px; 
+}
+
+.form-signup input:hover { 
+    border: solid grey 1px; 
 }
 
 
@@ -35,14 +40,16 @@
 
 .signup-container h2 { 
     font-size: 25px; 
-    font-weight: bold; 
+    font-weight: 600; 
     font-family: Helvetica,Arial,sans-serif;
     padding-bottom: 15px;
+    color: #1e0a3c;
+    margin-top: 25px; 
 }
 
 .signup-container p { 
     color: #6f7287; 
-    font-size: 16px; 
+    font-size: 14px; 
     font-family: Helvetica,Arial,sans-serif;
     margin-bottom: 30px; 
 }
@@ -50,16 +57,18 @@
 .form-signup button { 
     // border: solid pink 1px; 
     width: 320px; 
-    height: 40px; 
+    height: 45px; 
     text-align: center;
-    background-color: #eb5436; 
+    background-color: #d1400c; 
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: white;
+    margin-top: 25px; 
+    font-size:14px; 
 }
 
 .form-signup button:hover { 
-    color: grey; 
+    background-color: #eb5436; 
 }
 
 
