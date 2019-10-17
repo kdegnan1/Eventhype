@@ -12,26 +12,31 @@
     width: 425px; 
     align-items: center;
     margin-bottom: 10px; 
-    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif; 
 
 }
 
 
 .form-signin input { 
-    border: solid grey 1px; 
-    width: 320px; 
+    border: solid lightgrey 1px; 
+    width: 300px; 
     height: 50px; 
-    border-radius: 3px;
+    // border-radius: 3px;
     margin: 4px; 
     padding-left: 10px;  
+    margin-bottom: 15px; 
+}
 
+.form-signin input:hover { 
+    border: solid grey 1px; 
 }
 
 .signin-container p { 
-    color: white; 
-    font-size: 16px; 
+    color:#6f7287; 
+    font-size: 14px; 
     font-family: Helvetica,Arial,sans-serif;
-    margin-bottom: 30px; 
+    margin-bottom: 25px; 
+    margin-top: 5px; 
 }
 
 
@@ -39,8 +44,9 @@
     font-family: Helvetica,Arial,sans-serif;
 }
 .signin-container img {
-    width: 70px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px; 
 }
 
 
@@ -49,18 +55,23 @@
     font-weight: bold; 
     font-family: Helvetica,Arial,sans-serif;
     padding-bottom: 10px;
+    color: #1e0a3c;
 }
 
 .form-signin button { 
     // border: solid pink 1px; 
     width: 320px; 
-    height: 40px; 
+    height: 45px; 
     text-align: center;
     background-color: #d1400c;
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: white;
+    margin-bottom: 25px; 
+}
 
+.form-signin button:hover { 
+    background-color: #eb5436; 
 }
 
 .email-container { 
@@ -71,9 +82,9 @@
 }
 
 .email-container img { 
-    width: 70px;
-    height: 65px;
-    margin-bottom: 10px;
+    width: 80px;
+    height: 70px;
+    margin-bottom: 15px;
 }
 
 .form-email { 
@@ -86,42 +97,64 @@
 }
 
 .form-email input { 
-    border: solid grey 1px; 
-    width: 320px; 
+    border: solid lightgrey 1px; 
+    width: 300px; 
     height: 50px; 
-    border-radius: 3px;
     margin: 4px; 
     padding-left: 10px;  
+    margin-bottom: 25px; 
+    font-size: 12px; 
+}
+
+.form-email input:hover { 
+    border: solid grey 1px; 
 }
 
 .email-container h2 { 
     font-size: 25px; 
     font-weight: bold; 
     font-family: Helvetica,Arial,sans-serif;
+    padding-bottom: 10px; 
+}
+
+.email-container p { 
+    color:#6f7287; 
+    font-size: 14px; 
+    font-family: Helvetica,Arial,sans-serif;
     padding-bottom: 30px;
 }
 
 .form-email button { 
     // border: solid  #d1400c 1px; 
-    width: 320px; 
-    height: 40px; 
+    width: 312px; 
+    height: 45px; 
     text-align: center;
     background-color: #d1400c;
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: white;
-    margin-bottom: 5px; 
+    margin-bottom: 25px; 
+    font-size: 14px; 
+}
+
+.form-email button:hover { 
+    background-color: #eb5436; 
 }
 
 .demo { 
     // border: solid pink 1px; 
     width: 320px; 
-    height: 40px; 
+    height: 45px; 
     text-align: center;
     background-color: green;
     border-radius: 3px;
     font-family: Helvetica,Arial,sans-serif;
     color: white;
+    font-size: 14px; 
+}
+
+.demo:hover { 
+    background-color: #eb5436; 
 }
 
 .signup-error { 
