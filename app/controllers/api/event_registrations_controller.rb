@@ -1,13 +1,16 @@
-class Api::EventRegistrationController < ApplicationController 
+class Api::EventRegistrationsController < ApplicationController 
 
     before_action :ensure_logged_in, only: [:create, :destroy]
 
     def create
-        debugger
-        @event_registration = EventRegistration.new(event_reg_params) 
-        @event_registration.update(event_id: params[:event_id]) 
+        # debugger
+        @event = Event.find(params[:event_id]) 
+        # debugger
+        @event_registration = EventRegistration.create(user_id: current_user.id, event_id: @event.id) 
+        # @event_registration.update(event_id: params[:event_id]) 
+        # debugger
         if @event_registration.save 
-            @event = @event_registration.event 
+            # @event = @event_registration.event 
             render 'api/events/show'
         end
     end
@@ -19,10 +22,6 @@ class Api::EventRegistrationController < ApplicationController
         render 'api/events/show'
     end 
 
-    private 
 
-    def event_reg_params 
-        params.require(:event_registration).permit(:event_id, :user_id)
-    end 
 
 end
