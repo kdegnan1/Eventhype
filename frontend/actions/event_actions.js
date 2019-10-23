@@ -4,6 +4,7 @@ export const RECEIVE_EVENT = 'RECEIVE_EVENT'
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS'
 
 const receiveEvent = (event) => { 
+    debugger
     return ({
         type: RECEIVE_EVENT, 
         event
@@ -37,4 +38,16 @@ export const deleteEvent = (id) => dispatch => {
     return ApiEventsUtil.deleteEvent(id).then(events => dispatch(receiveEvents(events)))
 }
 
+export const createRegistration = (event_id) => dispatch => { 
+    debugger
+    return ApiEventsUtil.createRegistration(event_id).then(
+        event => { 
+            debugger
+        return  dispatch(receiveEvent(event))
+        })
+}
+
+export const deleteRegistration = (event_id, registration_id) => dispatch => { 
+    return ApiEventsUtil.deleteRegistration(event_id, registration_id).then(event => dispatch(receiveEvent(event))) 
+}
 

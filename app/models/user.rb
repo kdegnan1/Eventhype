@@ -11,6 +11,14 @@ class User < ApplicationRecord
     foreign_key: :creator_id, 
     class_name: :Event
 
+    has_many :event_registrations, 
+    foreign_key: :user_id, 
+    class_name: :EventRegistration 
+
+    has_many :registered_events, 
+    through: :event_registrations,
+    source: :event 
+
     ##FIGVAPER 
     def self.find_by_credentials(email, password) 
         # debugger

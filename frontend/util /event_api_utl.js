@@ -48,3 +48,22 @@ export const deleteEvent = (id) =>{
         })
     )
 }
+
+export const createRegistration = (event_id) => {
+    debugger 
+    return (
+        $.ajax({
+            method: 'POST',
+            url: `/api/events/${event_id}/event_registrations`
+        })
+    )
+}
+
+export const deleteRegistration = (event_id, registration_id) => {
+    return (
+        $.ajax({
+            method: 'DELETE',
+            url: `/api/events/${event_id}/event_registrations/${registration_id}`
+        })
+    )
+}
