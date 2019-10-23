@@ -28,9 +28,9 @@ def event1
         event_type: "Concert", 
         price: "$39.99 - $59.99", 
         organizer: "Avant Gardner", 
-        start_date: "Sat, Oct 12", 
+        start_date: "10/12/2019", 
         start_time: "10:00pm", 
-        end_date: "Sun, Oct 13", 
+        end_date: "10/13/2019", 
         end_time: "04:00am", 
     }
 end
@@ -55,9 +55,9 @@ STRICT DRESS CODE POLICY: -Gentlemen: Shoes, Button down shirts, and jeans are a
         event_type: "Nightlife", 
         price: "Free", 
         organizer: "ICLUBNYC", 
-        start_date: "Sat, Oct 22", 
+        start_date: "10/22/2019", 
         start_time: "10:00pm", 
-        end_date: "Sun, Oct 23", 
+        end_date: "10/23/2019", 
         end_time: "04:00am", 
 
     }
@@ -81,9 +81,9 @@ Enjoy the festivities at our 3,500 square foot venue which features amazing view
         event_type: "Festival", 
         price: "Free", 
         organizer: "PARTYPPL", 
-        start_date: "Sat, Oct 12", 
+        start_date: "10/12/2019", 
         start_time: "12:00pm", 
-        end_date: "Sun, Oct 13", 
+        end_date: "10/13/2019", 
         end_time: "12:00am", 
 
     }
@@ -101,9 +101,9 @@ def event4
         event_type: "Food", 
         price: "Free", 
         organizer: "Grand Baazar NYC", 
-        start_date: "Fri, Oct 20", 
+        start_date: "10/20/2019", 
         start_time: "01:00pm", 
-        end_date: "Fri, Oct 20", 
+        end_date: "10/20/2019", 
         end_time: "06:00pm", 
 
     }
@@ -134,9 +134,9 @@ NO REFUNDS - Event is rain or shine",
         event_type: "Concert", 
         price: "$79 - $169", 
         organizer: "DEG Presents", 
-        start_date: "Tue, Dec 31st", 
+        start_date: "12/31/2019", 
         start_time: "09:00pm", 
-        end_date: "Wed, Jan 1st", 
+        end_date: "01/01/2020", 
         end_time: "04:00am", 
 
     }
@@ -158,9 +158,9 @@ Again this year, we've partnered Lyft to encourage responsible transportation ch
         event_type: "Food", 
         price: "$0 - $154", 
         organizer: "Wölffer Estate Vineyard", 
-        start_date: "Sat, Oct 12", 
+        start_date: "10/12/2019", 
         start_time: "12:00pm", 
-        end_date: "Sat, Oct 12", 
+        end_date: "10/12/2019", 
         end_time: "04:00pm", 
 
     }
@@ -196,9 +196,9 @@ Very limited amount of earlybird tickets available",
         event_type: "Concert", 
         price: "$8 - $20", 
         organizer: "VampireFreaks", 
-        start_date: "Fri, Oct 25", 
+        start_date: "10/25/2019", 
         start_time: "10:00pm", 
-        end_date: "Sat, Oct 26", 
+        end_date: "10/26/2019", 
         end_time: "04:00am", 
 
     }
@@ -216,9 +216,9 @@ def event8
         event_type: "Concert", 
         price: "$29 – $79", 
         organizer: "Avant Gardner", 
-        start_date: "Sat, Dec 7", 
+        start_date: "12/07/2019", 
         start_time: "10:00pm", 
-        end_date: "Sun, Dec 8th", 
+        end_date: "12/08/2019", 
         end_time: "04:00am", 
 
     }

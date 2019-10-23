@@ -11,27 +11,62 @@
     display: flex; 
     justify-content: space-between; 
     font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-    height: 70px; 
+    height: 60px; 
     align-items: center;
     border-bottom: solid lightgray 1px;
-    margin-right: 20px; 
-    /* position: absolute;
-    backdrop-filter: blur(7px);
-    background-color: rgba(0,0,0,.1);
-    width: 100%; */
+    // margin-right: 20px; 
+    // position: absolute;
+    // backdrop-filter: blur(7px);
+    // background-color: rgba(0,0,0,.1);
+    // width: 100%; 
+}
+
+.logz { 
+    display: flex; 
+}
+
+.linkedin { 
+    width: 25px;
+    height: 25px;
+    padding-right: 20px; 
+    padding-top: 5px; 
+}
+
+.github { 
+    width: 25px;
+    height: 25px;
+    padding-right: 20px; 
+    padding-top: 3px; 
 }
 
 .button-create { 
     padding-right: 20px; 
+    padding-top: 8px; 
+    color:  #6f7287;
+    font-size: 13px; 
+}
+
+.plus {
+    width: 15px;
+    height: 15px;
+    padding-left: 32px; 
 }
 
 
+.button-logout { 
+    color:  #6f7287;
+    font-size: 13px; 
+    padding-right: 20px; 
+}
+
 .top-section { 
     background-image: image_url('flash.jpg');
+    position: absolute; 
+    // filter: blur(9px);
     width: 100%; 
     background-size: cover; 
     height: 500px; 
-    position: absolute; 
+    // position: absolute; 
 }
 
 .slogan { 
@@ -44,7 +79,9 @@
 .button-signin { 
     font-size: 17px;
     font-family: Helvetica,Arial,sans-serif;
-    margin-right: 15px; 
+    margin-right: 20px; 
+    color:  #6f7287;
+    font-size: 14px; 
     // margin-left: 15px; 
 }
 

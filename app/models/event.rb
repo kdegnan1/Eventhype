@@ -5,6 +5,13 @@ class Event < ApplicationRecord
     foreign_key: :creator_id, 
     class_name: :User
 
+    has_many :event_registrations, 
+    foreign_key: :event_id, 
+    class_name: :EventRegistration 
+
+    has_many :users, 
+    through: :event_registrations
+
     has_one_attached :photo
 
 

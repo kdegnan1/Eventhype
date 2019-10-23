@@ -7,7 +7,13 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
 
     get '/users/find_user', to: 'users#find_user'
-    resources :events, only: [:create, :update, :destroy, :index, :show]
+    
+    resources :events, except: [:new] do 
+      resources :event_registrations, only: [:create]
+    end
+    
+    delete '/events/:event_id/event_registrations', to: 'events#destroy'
+
   end
 
 end

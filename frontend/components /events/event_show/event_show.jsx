@@ -7,17 +7,43 @@ class EventShow extends React.Component {
     constructor(props) { 
         super(props)  
             this.state = { 
-
+                registered: false,
             }
         
+        this.registerButton = this.registerButton.bind(this); 
+        this.handleRegister = this.handleRegister.bind(this); 
     }
+
 
     componentDidMount() { 
         this.props.fetchEvent(this.props.match.params.id)
     }
 
-    render() { 
+    handleRegister(e) { 
         debugger
+        e.preventDefault(); 
+        if (!this.props.currentUser) { 
+            this.props.history.push('/signin'); 
+            return; 
+        }
+        this.setState({registered: !this.state.registered})
+        this.props.createRegistration(this.props.event.id)
+    }
+
+    registerButton() { 
+        if (this.state.registered) { 
+            return (
+                <button className="unregister-button" onClick={this.handleRegister}>Unregister</button>
+         )
+        }else { 
+            return ( 
+                <button className="toregister-button" onClick={this.handleRegister}>Register</button>
+            )
+        }
+    }
+
+    render() { 
+      
         // let {photoUrl, title, description, location, start_date, start_time, end_date, end_time, organizer} = this.props.event
         
         if (!this.props.event) { 
@@ -45,7 +71,9 @@ class EventShow extends React.Component {
                             price={this.props.event.price}
                         />
                         <div className="bar-show">
-                            <button> Register </button>
+                            <div className="register-button">
+                                {this.registerButton()} 
+                            </div>
                         </div>
                         <BodyDesc 
                             start_date = {this.props.event.start_date}
