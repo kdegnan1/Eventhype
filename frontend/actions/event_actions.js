@@ -35,7 +35,7 @@ export const updateEvent = (event) => dispatch => {
 }
 
 export const deleteEvent = (id) => dispatch => { 
-    return ApiEventsUtil.deleteEvent(id).then(events => dispatch(receiveEvents(events)))
+    return ApiEventsUtil.deleteEvent(id).then(event => dispatch(receiveEvents(event)))
 }
 
 export const createRegistration = (event_id) => dispatch => { 
