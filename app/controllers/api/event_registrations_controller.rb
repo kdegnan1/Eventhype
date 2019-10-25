@@ -7,17 +7,10 @@ class Api::EventRegistrationsController < ApplicationController
         # debugger
         if !@event.user_ids.include?(current_user.id)
             @event_registration = EventRegistration.create(user_id: current_user.id, event_id: @event.id) 
-            # if @event_registration.save 
-                # debugger
                 @event = Event.find(params[:event_id]) 
                 render 'api/events/show'
             # end
         else 
-            # @event_registration.update(event_id: params[:event_id]) 
-        # debugger
-
-        # if @event_registration.save 
-            # @event = @event_registration.event 
             render 'api/events/show'
         end
     end
