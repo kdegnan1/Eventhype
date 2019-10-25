@@ -4,4 +4,4 @@ json.event do
     if @event.photo.attached?
         json.photoUrl url_for(@event.photo) 
     end
-end
+end 

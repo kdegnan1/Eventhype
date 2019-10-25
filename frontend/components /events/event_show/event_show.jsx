@@ -7,7 +7,7 @@ class EventShow extends React.Component {
     constructor(props) { 
         super(props)  
             this.state = { 
-                registered: false,
+             
             }
         
         this.registerButton = this.registerButton.bind(this); 
@@ -19,6 +19,13 @@ class EventShow extends React.Component {
         this.props.fetchEvent(this.props.match.params.id)
     }
 
+    componentDidUpdate(prevProps) { 
+        // this.props.fetchEvent(this.props.match.params.id)
+        if (this.props.match.params.id !== prevProps.match.params.id) {
+            this.props.fetchEvent(this.props.match.params.id);
+        }
+    }
+
     handleRegister(e) { 
         debugger
         e.preventDefault(); 
@@ -26,12 +33,22 @@ class EventShow extends React.Component {
             this.props.history.push('/signin'); 
             return; 
         }
-        this.setState({registered: !this.state.registered})
+        // this.setState({registered: !this.state.registered})
         this.props.createRegistration(this.props.event.id)
     }
 
+    // handleUnRegister(e) { 
+    //     e.preventDefaul(); 
+    //     if(!)
+    // }
+
     registerButton() { 
-        if (this.state.registered) { 
+        debugger
+        if (!this.props.event.attendees) { 
+            return null
+        }
+
+        if (this.props.event.attendees.includes(currentUser.id)) { 
             return (
                 <button className="unregister-button" onClick={this.handleRegister}>Unregister</button>
          )
