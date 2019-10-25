@@ -1,4 +1,5 @@
 import React from 'react' 
+import RegItem from './event_reg_item_form'
 
 class EventReg extends React.Component { 
     constructor(props) { 
@@ -18,11 +19,16 @@ class EventReg extends React.Component {
         this.props.events.forEach((event, idx) => { 
             debugger
             if(event.attendees.includes(this.props.currentUser.id)) { 
-                arr.push(<div key={`event-${idx}`}>{event.title}</div>) 
+                arr.push(
+                <RegItem 
+                key={`event-${idx}`}
+                title = {event.title}
+                photoUrl={photoUrl}
+                location={location}
+                start_date={start_date} 
+                />
+                ) 
             }
-            // return( 
-            // <div key={`event-${idx}`}>{event.attendees}</div>
-            // )
         })     
            debugger 
             
