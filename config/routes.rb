@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       resources :event_registrations, only: [:create]
     end
     
-    delete '/events/:event_id/event_registrations', to: 'events#destroy'
+    delete '/events/:event_id/event_registrations', to: 'event_registrations#destroy' 
 
   end
 

@@ -12,6 +12,7 @@ class EventShow extends React.Component {
         
         this.registerButton = this.registerButton.bind(this); 
         this.handleRegister = this.handleRegister.bind(this); 
+        this.handleUnRegister = this.handleUnRegister.bind(this); 
     }
 
 
@@ -37,10 +38,11 @@ class EventShow extends React.Component {
         this.props.createRegistration(this.props.event.id)
     }
 
-    // handleUnRegister(e) { 
-    //     e.preventDefaul(); 
-    //     if(!)
-    // }
+    handleUnRegister(e) { 
+        debugger 
+        e.preventDefault(); 
+        this.props.deleteRegistration(this.props.event.id) 
+    }
 
     registerButton() { 
         debugger
@@ -49,10 +51,12 @@ class EventShow extends React.Component {
         }
 
         if (this.props.event.attendees.includes(currentUser.id)) { 
+            debugger 
             return (
-                <button className="unregister-button" onClick={this.handleRegister}>Unregister</button>
+                <button className="unregister-button" onClick={this.handleUnRegister}>Unregister</button>
          )
         }else { 
+            debugger
             return ( 
                 <button className="toregister-button" onClick={this.handleRegister}>Register</button>
             )

@@ -1,18 +1,20 @@
 import React from 'react' 
 import {connect} from 'react-redux' 
-import { fetchEvent } from '../../actions/event_actions'
+import { fetchEvents } from '../../actions/event_actions'
 import EventReg from './event_reg_form'
 
-const msp = (state, ownProps) => { 
+const msp = (state) => { 
+    debugger
     return { 
-        event: state.entities.events[ownProps.match.params.id], 
+        events: Object.values(state.entities.events),
         currentUser: state.session.currentUser 
     }
 }
 
 const mdp = dispatch => { 
+    debugger
     return { 
-        fetchEvent: (id) => dispatch(fetchEvent(id))
+        fetchEvents: () => dispatch(fetchEvents()) 
     }
 }
 

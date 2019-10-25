@@ -8,9 +8,34 @@ class EventReg extends React.Component {
             }   
     }
 
+    componentDidMount() {
+        debugger 
+        this.props.fetchEvents()
+    }
+
     render() { 
-        return ( 
-            <div>event registation</div>
+        let arr =[]; 
+        this.props.events.forEach((event, idx) => { 
+            debugger
+            if(event.attendees.includes(this.props.currentUser.id)) { 
+                arr.push(<div key={`event-${idx}`}>{event.title}</div>) 
+            }
+            // return( 
+            // <div key={`event-${idx}`}>{event.attendees}</div>
+            // )
+        })     
+           debugger 
+            
+            return ( 
+            <div>
+                <p>event registration</p>
+                <ul>
+                    <div>
+                        {arr} 
+                    </div>
+                </ul>
+            </div>
+            
         )
     }
 }
