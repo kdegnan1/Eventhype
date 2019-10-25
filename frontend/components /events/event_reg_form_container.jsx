@@ -4,7 +4,6 @@ import { fetchEvents } from '../../actions/event_actions'
 import EventReg from './event_reg_form'
 
 const msp = (state) => { 
-    debugger
     return { 
         events: Object.values(state.entities.events),
         currentUser: state.session.currentUser 
@@ -12,7 +11,6 @@ const msp = (state) => {
 }
 
 const mdp = dispatch => { 
-    debugger
     return { 
         fetchEvents: () => dispatch(fetchEvents()) 
     }
