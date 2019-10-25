@@ -4,8 +4,9 @@ import EventShow from './event_show'
 import {fetchEvent, deleteEvent, createRegistration, deleteRegistration} from '../../../actions/event_actions' 
 
 const msp = (state, ownProps) => { 
-    // debugger
+    debugger 
     return { 
+
         event: state.entities.events[ownProps.match.params.id], 
         currentUser: state.session.currentUser 
     }
