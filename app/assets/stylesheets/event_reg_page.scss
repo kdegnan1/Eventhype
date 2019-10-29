@@ -1,7 +1,14 @@
+.reg-window { 
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
 .user-info { 
     width: 100%; 
     height: 250px;
+    // background-image: linear-gradient(direction, #f9f8fa, white );
     background-color:#f9f8fa; 
+    display: flex; 
+    border-radius: 4px; 
 }
 
 .prof-pic{ 
@@ -11,3 +18,73 @@
     padding-top: 80px; 
     padding-left: 50px; 
 }
+
+.name-title-div { 
+    display: flex; 
+    padding-top: 110px; 
+    padding-left: 20px; 
+}
+
+.backsplash { 
+    margin-left: 50px; 
+    margin-right: 50px; 
+    box-shadow: 2px 2px 2px 2px lightgrey; 
+    // border-radius: 5px; 
+    // z-index: 5; 
+}
+
+.name-title { 
+    color: #1e0a3c;
+    font-size: 30px; 
+    font-weight: 600; 
+}
+
+.event-list { 
+    margin-left: 400px; 
+}
+
+.reg-photo { 
+    height: 200px;
+    width: 400px;
+    padding-top: 10px; 
+    padding-left: 40px;  
+}
+
+.title-event { 
+    margin-left: 380px; 
+    padding-top: 40px; 
+    margin-bottom:20px; 
+    color: #1e0a3c;
+    font-size: 18px; 
+    font-weight: 500px;
+}
+
+.reg-item-content { 
+    width: 200px;
+    padding-left: 10px; 
+}
+
+.reg-item { 
+    height: 265px;
+    width: 683px;
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+    display: flex; 
+}
+
+.reg-title {
+    font-size: 32px; 
+    color: #1e0a3c;
+    font-weight: 600; 
+}
+
+.reg-start { 
+    color: lightgray; 
+}
+
+.reg-item:hover { 
+    box-shadow: 2px 2px 2px 2px lightgrey; 
+
+}
+
+
