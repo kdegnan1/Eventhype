@@ -23,9 +23,9 @@ class EventReg extends React.Component {
                 <RegItem 
                 key={`event-${idx}`}
                 title = {event.title}
-                photoUrl={photoUrl}
-                location={location}
-                start_date={start_date} 
+                photoUrl={event.photoUrl}
+                location={event.location}
+                start_date={event.start_date} 
                 />
                 ) 
             }
@@ -34,7 +34,11 @@ class EventReg extends React.Component {
             
             return ( 
             <div>
-                <p>event registration</p>
+                <div className="user-info">
+                    <img className="prof-pic" src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Screen+Shot+2019-10-29+at+12.53.22+PM.png"}/>
+                    <p>{currentUser.fname}</p><p>{currentUser.lname}</p>
+                </div>
+                <p>Events</p>
                 <ul>
                     <div>
                         {arr} 
