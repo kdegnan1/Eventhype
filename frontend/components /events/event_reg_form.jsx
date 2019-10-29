@@ -24,7 +24,7 @@ class EventReg extends React.Component {
                 key={`event-${idx}`}
                 title = {event.title}
                 photoUrl={event.photoUrl}
-                location={event.location}
+                // location={event.location}
                 start_date={event.start_date} 
                 />
                 ) 
@@ -33,17 +33,22 @@ class EventReg extends React.Component {
            debugger 
             
             return ( 
-            <div>
-                <div className="user-info">
-                    <img className="prof-pic" src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Screen+Shot+2019-10-29+at+12.53.22+PM.png"}/>
-                    <p>{currentUser.fname}</p><p>{currentUser.lname}</p>
-                </div>
-                <p>Events</p>
-                <ul>
-                    <div>
-                        {arr} 
+            <div className="reg-window">
+                <div className="backsplash">
+                    <div className="user-info">
+                        <img className="prof-pic" src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Screen+Shot+2019-10-29+at+12.53.22+PM.png"}/>
+                            <div className="name-title-div">
+                                <p className="name-title">{currentUser.fname}</p>
+                                <p className="name-title">{currentUser.lname}</p>
+                            </div> 
                     </div>
-                </ul>
+                    <p className="title-event">Events</p>
+                    <ul>
+                        <div className="event-list">
+                            {arr} 
+                        </div>
+                    </ul>
+                </div>
             </div>
             
         )
