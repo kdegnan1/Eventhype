@@ -11,7 +11,7 @@
     border-radius: 4px; 
 }
 
-.prof-pic{ 
+.prof-pic-show{ 
     width: 125px;
     height: 125px;
     // border-radius: 125px;
@@ -35,9 +35,9 @@
 
 .name-title { 
     color: #1e0a3c;
-    // font-size: 30px; 
-    // font-weight: 600; 
-    // padding-left: 5px; 
+    font-size: 30px; 
+    font-weight: 600; 
+    padding-left: 5px; 
 }
 
 .event-list { 
@@ -52,7 +52,7 @@
 }
 
 .title-event { 
-    margin-left: 380px; 
+    margin-left: 400px; 
     padding-top: 40px; 
     margin-bottom:20px; 
     color: #1e0a3c;
@@ -81,6 +81,12 @@
 
 .reg-start { 
     color: grey; 
+    padding-top: 30px; 
+}
+
+.reg-location { 
+    color: #1e0a3c;
+    padding-top: 30px; 
 }
 
 .reg-item:hover { 
