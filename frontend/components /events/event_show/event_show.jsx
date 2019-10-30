@@ -17,10 +17,12 @@ class EventShow extends React.Component {
 
 
     componentDidMount() { 
+        debugger
         this.props.fetchEvent(this.props.match.params.id)
     }
 
     componentDidUpdate(prevProps) { 
+        debugger
         // this.props.fetchEvent(this.props.match.params.id)
         if (this.props.match.params.id !== prevProps.match.params.id) {
             this.props.fetchEvent(this.props.match.params.id);

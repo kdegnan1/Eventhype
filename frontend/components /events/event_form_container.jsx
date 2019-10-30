@@ -4,6 +4,7 @@ import {fetchEvent, createEvent, updateEvent} from '../../actions/event_actions'
 import EventForm from './event_form' 
 
 const msp = ({errors, entities, session}) => { 
+    debugger
     return { 
         // errors: error.session, 
         events: entities.events, 
@@ -12,6 +13,7 @@ const msp = ({errors, entities, session}) => {
 }
 
 const mdp = dispatch => { 
+    debugger
     return { 
         createEvent: (event) => dispatch(createEvent(event)), 
         fetchEvent: (id) => dispatch(createEvent(id)), 
