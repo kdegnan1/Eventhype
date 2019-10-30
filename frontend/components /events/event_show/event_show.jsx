@@ -46,6 +46,36 @@ class EventShow extends React.Component {
         this.props.deleteRegistration(this.props.event.id) 
     }
 
+    fixstarttime() {
+        let starttime = new Date(this.props.event.start_time)
+        let starttime_hours = starttime.getHours();
+        let starttime_minutes = starttime.getMinutes(); 
+        let last;
+        let newhour;
+
+        if (starttime_hours < 12) {
+            return starttime_hours + ":" + starttime_minutes + '0' +  'AM'
+        } else {
+            return (starttime_hours - 12) + ':' + starttime_minutes + '0' + 'PM'
+        }
+    }
+
+    fixendtime() {
+        let endtime = new Date(this.props.event.end_time)
+        let endtime_hours = endtime.getHours();
+        let endtime_minutes = endtime.getMinutes(); 
+        let last1;
+        let newhour1;
+
+        if (endtime_hours < 12) {
+            return endtime_hours + ":" + endtime_minutes + '0'+ 'AM'
+        } else {
+            return (endtime_hours - 12) + ':' + endtime_minutes + '0' + 'PM'
+        }
+    }
+
+ 
+
     registerButton() { 
         debugger
         if (!this.props.event.attendees) { 
@@ -88,6 +118,7 @@ class EventShow extends React.Component {
                             organizer ={this.props.event.organizer} 
                             photo = {this.props.event.photoUrl}
                             price={this.props.event.price}
+                            
                         />
                         <div className="bar-show">
                             <div className="register-button">
@@ -105,6 +136,8 @@ class EventShow extends React.Component {
                             photo = {this.props.event.photoUrl}
                             price={this.props.event.price}
                             location = {this.props.event.location}
+                            fixstart={this.fixstarttime()}
+                            fixend={this.fixendtime()}
                         />
                     </div>
                 </div> 
