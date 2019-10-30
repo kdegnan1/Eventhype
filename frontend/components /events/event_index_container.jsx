@@ -4,6 +4,7 @@ import {fetchEvents} from '../../actions/event_actions'
 import { connect } from 'react-redux' 
 
 const msp = (state) => { 
+    debugger
     return { 
         events: Object.values(state.entities.events),
         currentUser: state.session.id
