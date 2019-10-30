@@ -7,13 +7,6 @@ export default ({ currentUser, logoutUser }) => {
         <div className="logz">
 
         
-            <a href="https://www.linkedin.com/in/katherine-degnan-8a1b7372/">
-                <img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/linkedin.png"} className="linkedin"/>
-            </a>
-
-            <a href="https://github.com/kdegnan1">
-                <img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/github.jpg"} className="github"/>
-            </a>
 
             <div className="box">
 
