@@ -12,8 +12,7 @@ const BodyDesc = props => {
     let startdate_date = startdate.getDate(); 
     let start = '  ' +  startdate_weekday + ', ' + startdate_month + " " + startdate_date + ', ' + startdate_year
 
-    let starttime = new Date(props.start_time) 
-    let starttime_hours = starttime.getHours(); 
+  
 
     let enddate = new Date(props.end_date) 
     let enddate_weekday = days[enddate.getDay()];
@@ -23,8 +22,9 @@ const BodyDesc = props => {
     let end = enddate_weekday + ', ' + enddate_month + " " + enddate_date + ', ' + enddate_year
 
 
-    let endtime = new Date(props.end_time) 
-    let endtime_hours = endtime.getHours(); 
+  
+
+ 
 
 
     debugger 
@@ -34,10 +34,10 @@ const BodyDesc = props => {
         <div className="event-desc">
             <p className="super-desc">{props.description} </p>
             <div className="side-desc-info"> 
-                <h3>Date and Time </h3>
-                    <div> <p className="a">Start:</p>  <p>{start}</p>{}- </div>
-                   <br/>
-                    <div> <p className="a">End:</p> <p>{end}</p>{} </div>
+                <h3>Date and Time </h3> 
+                    <div> <p className="a">Start:</p> <p>{start}</p>{props.fixstart}</div>
+                   {/* <br/> */}
+                    <div> <p className="a">End:</p> <p>{end}</p>{props.fixend}</div>
                 <h3> Location </h3> 
                     <span>{props.location}</span> 
             </div>
