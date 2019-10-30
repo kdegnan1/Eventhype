@@ -79,11 +79,11 @@ class EventForm extends React.Component {
                         <div className="date-time"> 
                             <label>Start</label>  <label>End</label>
                             <br/>
-                            <input type="text" placeholder="   10/01/2019" onChange={this.handleInput('start_date')}/>
-                            <input type="text" placeholder="   07:00pm" onChange={this.handleInput('start_time')}/>
+                            <input type="date"  onChange={this.handleInput('start_date')}/>
+                            <input type="time"  onChange={this.handleInput('start_time')}/>
                         
-                            <input type="text" placeholder="   10/12/2019" onChange={this.handleInput('end_date')}/>
-                            <input type="text" placeholder="   10:00pm" onChange={this.handleInput('end_time')}/>
+                            <input type="date"  onChange={this.handleInput('end_date')}/>
+                            <input type="time"  onChange={this.handleInput('end_time')}/>
                         </div>
 
                         <label >Event Description</label>
