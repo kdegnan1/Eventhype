@@ -73,12 +73,8 @@ class EventShow extends React.Component {
             return null
         }
 
-        // if(this.props.currentUser.id === this.props.event.creator_id) { 
-        //     <button onClick={this.props.deleteEvent(this.props.match.params.id)}>Delete Event </button>
-        //     else {
-        //     return null
-        //     }
-        // }
+       
+
         return (
             <div className="event-show-container"> 
                 <Banner
