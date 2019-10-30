@@ -11,7 +11,6 @@ const IndexItem = (props) => {
     let weekday = days[fulldate.getDay()] ;
     let indexdate = weekday + ", " + month +' '+ date ;
  
-    
     return ( 
         <div className="index-item">
             <img className="index-photo" src={props.photoUrl} onClick={props.onEventClick}/>
