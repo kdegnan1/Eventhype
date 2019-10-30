@@ -21,8 +21,25 @@
 
 .name-title-div { 
     display: flex; 
+    flex-direction: column; 
     padding-top: 110px; 
     padding-left: 20px; 
+}
+
+.reg-likes span { 
+    color: #4B4D63; 
+    font-size: 14px; 
+    font-weight: 200; 
+    // padding-left: 10px; 
+}
+
+.like-me { 
+    padding-left: 10px; 
+
+}
+
+.reg-likes span:not(:last-child):after{
+    content: " \2219 ";
 }
 
 .backsplash { 
