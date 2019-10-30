@@ -1,6 +1,8 @@
 import React from 'react' 
 
 const IndexItem = (props) => { 
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec" ]
+    let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" ]
     return ( 
         <div className="index-item">
             <img className="index-photo" src={props.photoUrl} onClick={props.onEventClick}/>
