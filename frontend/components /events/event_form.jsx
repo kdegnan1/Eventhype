@@ -77,11 +77,14 @@ class EventForm extends React.Component {
                         <input className="long-input-location" type="text" value={this.state.location} placeholder="   Venue or address" onChange={this.handleInput('location')} />
                         
                         <div className="date-time"> 
-                            <label>Start</label>  <label>End</label>
+                            <label>Start</label>  
                             <br/>
                             <input type="date"  onChange={this.handleInput('start_date')}/>
                             <input type="time"  onChange={this.handleInput('start_time')}/>
-                        
+                            <br/>
+                            <br/>
+                            <label>End</label>
+                            <br/>
                             <input type="date"  onChange={this.handleInput('end_date')}/>
                             <input type="time"  onChange={this.handleInput('end_time')}/>
                         </div>
