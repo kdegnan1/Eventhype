@@ -4,7 +4,9 @@ import { fetchEvents } from '../../actions/event_actions'
 import EventReg from './event_reg_form'
 
 const msp = (state) => { 
+    debugger
     return { 
+        
         events: Object.values(state.entities.events),
         currentUser: state.session.currentUser 
     }
