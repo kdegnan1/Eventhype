@@ -11,6 +11,9 @@ require 'open-uri'
 User.destroy_all 
 Event.destroy_all 
 
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('events')
+
 demouser = User.create!(email: 'katherine', password: 'password', fname: 'kat', lname:"degnan")
 Katherine = User.create!(email: 'kat@gmail.com', password: 'password1', fname: 'katherine', lname: "degnan")
 Sabrina = User.create!(email: 'sab@gmail.com', password: 'password2', fname: 'sabrina', lname: "degnan")
@@ -28,10 +31,10 @@ def event1
         event_type: "Concert", 
         price: "$39.99 - $59.99", 
         organizer: "Avant Gardner", 
-        start_date: "10/12/2019", 
-        start_time: "10:00pm", 
-        end_date: "10/13/2019", 
-        end_time: "04:00am", 
+        start_date: Date.new(2019, 10, 12), 
+        start_time: Time.new(2019, 10, 12, 22),
+        end_date: Date.new(2019, 10, 13), 
+        end_time: Time.new(2019, 10, 13, 4), 
     }
 end
 
@@ -55,10 +58,10 @@ STRICT DRESS CODE POLICY: -Gentlemen: Shoes, Button down shirts, and jeans are a
         event_type: "Nightlife", 
         price: "Free", 
         organizer: "ICLUBNYC", 
-        start_date: "10/22/2019", 
-        start_time: "10:00pm", 
-        end_date: "10/23/2019", 
-        end_time: "04:00am", 
+        start_date: Date.new(2019, 10, 13), 
+        start_time: Time.new(2019, 10, 13, 22), 
+        end_date: Date.new(2019, 10, 14), 
+        end_time: Time.new(2019, 10, 13, 4), 
 
     }
 end  
@@ -81,10 +84,10 @@ Enjoy the festivities at our 3,500 square foot venue which features amazing view
         event_type: "Festival", 
         price: "Free", 
         organizer: "PARTYPPL", 
-        start_date: "10/12/2019", 
-        start_time: "12:00pm", 
-        end_date: "10/13/2019", 
-        end_time: "12:00am", 
+        start_date: Date.new(2019, 10, 12), 
+        start_time: Time.new(2019, 10, 12, 2), 
+        end_date: Date.new(2019, 10, 13), 
+        end_time: Time.new(2019, 10, 13, 1), 
 
     }
 end  
@@ -101,10 +104,10 @@ def event4
         event_type: "Food", 
         price: "Free", 
         organizer: "Grand Baazar NYC", 
-        start_date: "10/20/2019", 
-        start_time: "01:00pm", 
-        end_date: "10/20/2019", 
-        end_time: "06:00pm", 
+        start_date: Date.new(2019, 10, 20), 
+        start_time: Time.new(2019, 10, 20, 12), 
+        end_date: Date.new(2019, 10, 20), 
+        end_time: Time.new(2019, 10, 20, 16), 
 
     }
 end  
@@ -134,10 +137,10 @@ NO REFUNDS - Event is rain or shine",
         event_type: "Concert", 
         price: "$79 - $169", 
         organizer: "DEG Presents", 
-        start_date: "12/31/2019", 
-        start_time: "09:00pm", 
-        end_date: "01/01/2020", 
-        end_time: "04:00am", 
+        start_date: Date.new(2019, 12, 31), 
+        start_time: Time.new(2019, 12, 31, 22), 
+        end_date: Date.new(2020, 01, 1), 
+        end_time: Time.new(2020, 01, 1, 4), 
 
     }
 end  
@@ -158,10 +161,10 @@ Again this year, we've partnered Lyft to encourage responsible transportation ch
         event_type: "Food", 
         price: "$0 - $154", 
         organizer: "Wölffer Estate Vineyard", 
-        start_date: "10/12/2019", 
-        start_time: "12:00pm", 
-        end_date: "10/12/2019", 
-        end_time: "04:00pm", 
+        start_date: Date.new(2019, 10, 12), 
+        start_time: Time.new(2019, 10, 12, 12), 
+        end_date: Date.new(2019, 10, 12), 
+        end_time: Time.new(2019, 10, 12, 18), 
 
     }
 end  
@@ -196,10 +199,10 @@ Very limited amount of earlybird tickets available",
         event_type: "Concert", 
         price: "$8 - $20", 
         organizer: "VampireFreaks", 
-        start_date: "10/25/2019", 
-        start_time: "10:00pm", 
-        end_date: "10/26/2019", 
-        end_time: "04:00am", 
+        start_date: Date.new(2019, 10, 25), 
+        start_time: Time.new(2019, 10, 25, 19 ), 
+        end_date: Date.new(2019, 10, 26), 
+        end_time: Time.new(2019, 10, 26, 23), 
 
     }
 end  
@@ -216,10 +219,10 @@ def event8
         event_type: "Concert", 
         price: "$29 – $79", 
         organizer: "Avant Gardner", 
-        start_date: "12/07/2019", 
-        start_time: "10:00pm", 
-        end_date: "12/08/2019", 
-        end_time: "04:00am", 
+        start_date: Date.new(2019, 12, 7), 
+        start_time: Time.new(2019, 12, 7, 22), 
+        end_date: Date.new(2019, 12, 8), 
+        end_time: Time.new(2019, 12, 8, 4), 
 
     }
 end  
