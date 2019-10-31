@@ -2,7 +2,15 @@ import React from 'react' ;
 import {Link} from 'react-router-dom' 
 import Dropdown from '../dropdown/dropdown'
 
-export default ({ currentUser, logoutUser }) => { 
+export default ({ currentUser, logoutUser, history }) => { 
+
+    function handleLogout(e) { 
+        e.preventDefault();
+        logoutUser().then(() => history.push('/'))
+    }
+
+    
+
     const display = currentUser ? ( 
         <div className="logz">
 
@@ -27,7 +35,7 @@ export default ({ currentUser, logoutUser }) => {
             
             </div>
 
-            <button className="button-logout" onClick={logoutUser}>Log Out</button> 
+            <button className="button-logout" onClick={handleLogout}>Log Out</button> 
             
             {/* <Dropdown />  */}
 

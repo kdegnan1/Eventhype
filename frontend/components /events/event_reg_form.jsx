@@ -40,8 +40,8 @@ class EventReg extends React.Component {
                         <img className="prof-pic-show" src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Screen+Shot+2019-10-29+at+12.53.22+PM.png"}/>
                             <div className="name-title-div">
                                 <div>
-                                    <span className="name-title">{currentUser.fname}</span>
-                                    <span className="name-title">{currentUser.lname}</span>
+                                    <span className="name-title">{this.props.currentUser.fname}</span>
+                                    <span className="name-title">{this.props.currentUser.lname}</span>
                                 </div>
                                 <div className="reg-likes">
                                     <span>{count} events </span>

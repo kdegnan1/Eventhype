@@ -82,7 +82,13 @@ class EventShow extends React.Component {
             return null
         }
 
-        if (this.props.event.attendees.includes(currentUser.id)) { 
+        if (!this.props.currentUser) { 
+            return (
+                <button className="toregister-button" onClick={this.handleRegister}>Register</button>
+            )
+        }
+        debugger
+        if (this.props.event.attendees.includes(this.props.currentUser.id)) { 
             debugger 
             return (
                 <button className="unregister-button" onClick={this.handleUnRegister}>Unregister</button>
