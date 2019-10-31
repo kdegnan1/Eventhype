@@ -16,7 +16,6 @@ export default () => (
     <div>
 
         <Route path='/' component={NavBarContainer}  />
-        <Route path='/' component={Footer} />
         <Route exact path='/' component={Splash}  />
         <Route exact path ='/' component={EventIndexContainer}/>
         {/* <AuthRoute path='/signup' component={SignUpContainer} /> */}
@@ -26,6 +25,7 @@ export default () => (
         <AuthRoute path='/signin/signup' component={SignUpContainer} />
         <ProtectedRoute path='/create_event' component={EventFormContainer} /> 
         <ProtectedRoute path='/user_events' component={EventRegContainer} />
+        <Route path='/' component={Footer} />
     </div>
 )
 
