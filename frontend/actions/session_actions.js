@@ -15,7 +15,7 @@ const receiveSessionErrors = errors => {
 } 
 
 const receiveCurrentUser = user => { 
-    // debugger
+    debugger
     return ({ 
         type: RECEIVE_CURRENT_USER, 
         user
