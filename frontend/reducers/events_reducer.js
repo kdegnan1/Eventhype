@@ -1,5 +1,6 @@
-import {RECEIVE_EVENT, RECEIVE_EVENTS} from '../actions/event_actions'
+import {RECEIVE_EVENT, RECEIVE_EVENTS, REMOVE_EVENT} from '../actions/event_actions'
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions'
+import {merge} from 'lodash' 
 
 const eventsReducer = (state={}, action) => { 
     Object.freeze(state)
@@ -13,6 +14,11 @@ const eventsReducer = (state={}, action) => {
         case RECEIVE_EVENTS: 
         // debugger
             return action.events 
+        case REMOVE_EVENT:
+            debugger
+            let newState = merge({}, state);
+            delete newState[action.id];
+           return newState;
         default: 
             return state 
     }

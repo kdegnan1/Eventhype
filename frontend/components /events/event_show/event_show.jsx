@@ -13,6 +13,7 @@ class EventShow extends React.Component {
         this.registerButton = this.registerButton.bind(this); 
         this.handleRegister = this.handleRegister.bind(this); 
         this.handleUnRegister = this.handleUnRegister.bind(this); 
+        this.handleDelete = this.handleDelete.bind(this) 
     }
 
 
@@ -74,6 +75,10 @@ class EventShow extends React.Component {
         }
     }
 
+    handleDelete(e) { 
+        e.preventDefault(); 
+        this.props.deleteEvent(this.props.event.id).then(() => this.props.history.push('/'))
+    }
  
 
     registerButton() { 
@@ -127,6 +132,11 @@ class EventShow extends React.Component {
                             
                         />
                         <div className="bar-show">
+                            <div>
+                            <button className="button-edit" ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"}/></button>
+                            </div> 
+                            <button className="button-delete" onClick={this.handleDelete}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Trash-512.png"} /></button>
+                            <button className="button-like" ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"}/></button>
                             <div className="register-button">
                                 {this.registerButton()} 
                             </div>

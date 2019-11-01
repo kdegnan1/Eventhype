@@ -27,11 +27,11 @@ export const logout = () => {
     ); 
 }
 export const finduser = (email) => { 
-    // debugger
+    debugger
     return( 
         $.ajax({ 
             method: 'GET',
-            url: '/api/users/find_user', 
+            url: '/api/find/user', 
             // data: {email}
             data: {user: email}
         })

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show] 
     resource :session, only: [:create, :destroy]
 
-    get '/users/find_user', to: 'users#find_user'
+    get '/find/user', to: 'users#find_user'
     
     resources :events, except: [:new] do 
       resources :event_registrations, only: [:create]

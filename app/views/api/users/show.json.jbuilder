@@ -10,6 +10,6 @@ json.events do
                 json.attendees event.user_ids 
                 json.photoUrl url_for(event.photo) 
 
-        end
+        end 
     end
 end 

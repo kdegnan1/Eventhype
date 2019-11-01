@@ -19,7 +19,7 @@ class FindEmail extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // debugger
+        debugger
         const email = Object.assign({}, this.state);
         this.props.findUser(email).then((user) => {
             this.props.history.push({
