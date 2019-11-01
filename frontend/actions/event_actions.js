@@ -2,6 +2,7 @@ import * as ApiEventsUtil from '../util /event_api_utl'
 
 export const RECEIVE_EVENT = 'RECEIVE_EVENT'
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS'
+export const REMOVE_EVENT = 'REMOVE_EVENT'
 
 const receiveEvent = (event) => { 
     debugger
@@ -15,6 +16,13 @@ const receiveEvents = (events) => {
     return ({
         type: RECEIVE_EVENTS,
         events 
+    })
+}
+
+const removeEvent = (id) => { 
+    return({ 
+        type: REMOVE_EVENT, 
+        id 
     })
 }
 
@@ -35,7 +43,7 @@ export const updateEvent = (event) => dispatch => {
 }
 
 export const deleteEvent = (id) => dispatch => { 
-    return ApiEventsUtil.deleteEvent(id).then(event => dispatch(receiveEvents(event)))
+    return ApiEventsUtil.deleteEvent(id).then(id => dispatch(removeEvent(id)))
 }
 
 export const createRegistration = (event_id) => dispatch => { 

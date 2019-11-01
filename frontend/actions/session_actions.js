@@ -38,6 +38,7 @@ const receiveEmail = (email) => {
 }
 
 export const fetchUser = id => dispatch => { 
+    debugger
     return fetchuser(id).then(user => dispatch(receiveCurrentUser(user)))
 }
 

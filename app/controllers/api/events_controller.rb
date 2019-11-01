@@ -17,15 +17,14 @@ class Api::EventsController < ApplicationController
         if @event.update(event_params) 
             render :show 
         else 
-            render json: @event.errors.full_messages, status: 401
-
+            render json: @event.errors.full_messages, status: 401 
         end
     end
 
     def destroy 
         event = Event.find(params[:id])
         if event.destroy 
-            render :index 
+            render json: event.id 
         else
             render json: @event.errors.full_messages, status: 401
         end 
