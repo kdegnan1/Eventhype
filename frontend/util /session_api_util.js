@@ -37,4 +37,11 @@ export const finduser = (email) => {
         })
     )
 }
-
+export const fetchuser = (id) => { 
+    return( 
+        $.ajax({ 
+            method: 'GET', 
+            url: `/api/users/${id}`  
+        })
+    )
+}

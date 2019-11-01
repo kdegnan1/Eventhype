@@ -1,4 +1,4 @@
-import { signup, login, logout, finduser } from '../util /session_api_util'
+import { signup, login, logout, finduser, fetchuser } from '../util /session_api_util'
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER'
@@ -14,13 +14,14 @@ const receiveSessionErrors = errors => {
     })
 } 
 
-const receiveCurrentUser = user => { 
+const receiveCurrentUser = userPayload => { 
     debugger
     return ({ 
         type: RECEIVE_CURRENT_USER, 
-        user
+        userPayload 
     });
 } 
+
 
 const logoutCurrentUser = () => { 
     return({ 
@@ -34,6 +35,10 @@ const receiveEmail = (email) => {
         type: RECEIVE_EMAIL, 
         email
     })
+}
+
+export const fetchUser = id => dispatch => { 
+    return fetchuser(id).then(user => dispatch(receiveCurrentUser(user)))
 }
 
 export const signupUser = formUser => dispatch => { 
