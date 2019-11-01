@@ -11,7 +11,15 @@ class EventReg extends React.Component {
 
     componentDidMount() {
         debugger 
-        this.props.fetchEvents()
+        this.props.fetchUser(this.props.currentUser.id)
+    }
+
+
+
+    handleEventClick(id) {
+        return () => {
+            this.props.history.push(`/events/${id}`)
+        }
     }
 
     render() { 
@@ -27,6 +35,7 @@ class EventReg extends React.Component {
                 photoUrl={event.photoUrl}
                 location={event.location}
                 start_date={event.start_date} 
+                onEventClick = {this.handleEventClick(event.id)}
                 />
                 ) 
             }

@@ -13,6 +13,10 @@ class Api::UsersController < ApplicationController
         end
     end
 
+    def show 
+        @user = User.find(params[:id]) 
+    end
+
     def find_user
         # debugger
         @user = User.where(email: params[:user][:email])
