@@ -69,3 +69,21 @@ export const deleteRegistration = (event_id) => {
         })
     )
 }
+
+export const createLike = (event_id) => { 
+    return (
+        $.ajax({ 
+            method: 'POST', 
+            url: `/api/events/${event_id}/event_likes`
+        })
+    )
+}
+
+export const deleteLike = (event_id) => { 
+    return (
+        $.ajax({ 
+            method: 'POST', 
+            url: `/api/events/${event_id}/event_likes`
+        })
+    )
+}

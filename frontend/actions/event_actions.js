@@ -55,7 +55,15 @@ export const createRegistration = (event_id) => dispatch => {
         })
 }
 
+
 export const deleteRegistration = (event_id, registration_id) => dispatch => { 
     return ApiEventsUtil.deleteRegistration(event_id, registration_id).then(event => dispatch(receiveEvent(event))) 
 }
 
+export const createLike = event_id => dispatch => { 
+    return ApiEventsUtil.createLike(id).then(event => dispatch(receiveEvent(event)))
+}
+
+export const deleteLike = event_id => dispatch => { 
+    return ApiEventsUtil.deleteLike(id).then(id => dispatch(receiveEvent(event))) 
+}
