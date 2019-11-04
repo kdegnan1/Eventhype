@@ -19,6 +19,14 @@ class User < ApplicationRecord
     through: :event_registrations,
     source: :event 
 
+    has_many :event_likes, 
+    foreign_key: :user_id, 
+    class_name: :EventLike 
+    
+    has_many :liked_events, 
+    through: :event_likes, 
+    source: :event 
+
    
     def self.find_by_credentials(email, password) 
         # debugger

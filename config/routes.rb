@@ -9,9 +9,12 @@ Rails.application.routes.draw do
     get '/find/user', to: 'users#find_user'
     
     resources :events, except: [:new] do 
-      resources :event_registrations, only: [:create]
+      resources :event_registrations, only: [:create] 
+      resources :event_likes, only: [:create] 
     end
-    
+
+    delete '/events/:event_id/event_likes', to: 'event_likes#destroy' 
+
     delete '/events/:event_id/event_registrations', to: 'event_registrations#destroy' 
 
   end
