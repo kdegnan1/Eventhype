@@ -1,7 +1,7 @@
 import React from 'react' 
 import {connect} from 'react-redux' 
 import EventShow from './event_show'
-import {fetchEvent, deleteEvent, createRegistration, deleteRegistration} from '../../../actions/event_actions' 
+import {fetchEvent, deleteEvent, createRegistration, deleteRegistration, createLike, deleteLike} from '../../../actions/event_actions' 
 
 const msp = (state, ownProps) => { 
     debugger 
@@ -18,7 +18,9 @@ const mdp = dispatch => {
         deleteEvent: (id) => dispatch(deleteEvent(id)),
         createRegistration: (event_id) => dispatch(createRegistration(event_id)), 
         // deleteRegistration: (event_id, registration_id) => dispatch(deleteRegistration(event_id, user_id)) 
-        deleteRegistration: (event_id) => dispatch(deleteRegistration(event_id)) 
+        deleteRegistration: (event_id) => dispatch(deleteRegistration(event_id)), 
+        createLike: (event_id) => dispatch(createLike(event_id)), 
+        deleteLike: (event_id) => dispatch(deleteLike(event_id)) 
     }
 }
 
