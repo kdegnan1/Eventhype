@@ -12,6 +12,13 @@ class Event < ApplicationRecord
     has_many :users, 
     through: :event_registrations
 
+    has_many :event_likes, 
+    foreign_key: :event_id, 
+    class_name: :EventLike 
+
+    has_many :liked_users, 
+    through: :event_likes 
+
     has_one_attached :photo
 
 
