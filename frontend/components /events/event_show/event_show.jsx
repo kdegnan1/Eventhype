@@ -13,7 +13,9 @@ class EventShow extends React.Component {
         this.registerButton = this.registerButton.bind(this); 
         this.handleRegister = this.handleRegister.bind(this); 
         this.handleUnRegister = this.handleUnRegister.bind(this); 
-        this.handleDelete = this.handleDelete.bind(this) 
+        this.handleDelete = this.handleDelete.bind(this); 
+        this.handleLike = this.handleLike.bind(this) ;
+        this.handleUnLike - this.handleUnLike.bind(this);
     }
 
 
@@ -31,7 +33,7 @@ class EventShow extends React.Component {
     }
 
     handleRegister(e) { 
-        debugger
+        // debugger
         e.preventDefault(); 
         if (!this.props.currentUser) { 
             this.props.history.push('/signin'); 
@@ -42,9 +44,25 @@ class EventShow extends React.Component {
     }
 
     handleUnRegister(e) { 
-        debugger 
+        // debugger 
         e.preventDefault(); 
         this.props.deleteRegistration(this.props.event.id) 
+    }
+
+    handleLike(e) { 
+        // debugger 
+        e.preventDefault(); 
+        if (!this.props.currentUser) {
+            this.props.history.push('/signin');
+            return;
+        }
+        this.props.createLike(this.props.event.id)
+    }
+
+    handleUnLike(e) { 
+        debugger
+        e.preventDefault(); 
+        this.props.deleteLike(this.props.event.id) 
     }
 
     fixstarttime() {
