@@ -50,7 +50,7 @@ class EventShow extends React.Component {
     }
 
     handleLike(e) { 
-        // debugger 
+        debugger 
         e.preventDefault(); 
         if (!this.props.currentUser) {
             this.props.history.push('/signin');
@@ -127,16 +127,19 @@ class EventShow extends React.Component {
     likeButton() { 
         debugger 
         if (this.props.currentUser) { 
+            debugger
             return (
                 <button className="button-tolike" onClick={this.handleLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
             )
         }
         debugger 
         if (this.props.event.likers.includes(this.props.currentUser.id)) { 
+            debugger
             return ( 
-                <button className="button-unlike" onClick={this.handleUnLike}>{"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"}</button>
+                <button className="button-unlike" onClick={this.handleUnLike}>{"https://eventhype-pic.s3.us-east-2.amazonaws.com/images.png"}</button> 
             )
         }else { 
+            debugger
             return( 
                 <button className="button-tolike" onClick={this.handleLike} ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
             )
