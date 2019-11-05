@@ -1,0 +1,1 @@
+json.partial! 'api/event_likes/event_like' , event_like: @event_like 

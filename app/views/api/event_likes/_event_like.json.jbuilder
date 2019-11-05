@@ -1,0 +1,1 @@
+json.extract! event_like, :user_id, :event_id, :id 
