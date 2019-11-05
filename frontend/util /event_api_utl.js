@@ -71,6 +71,7 @@ export const deleteRegistration = (event_id) => {
 }
 
 export const createLike = (event_id) => { 
+    debugger
     return (
         $.ajax({ 
             method: 'POST', 
@@ -80,6 +81,7 @@ export const createLike = (event_id) => {
 }
 
 export const deleteLike = (event_id) => { 
+    debugger
     return (
         $.ajax({ 
             method: 'POST', 
