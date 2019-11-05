@@ -126,19 +126,19 @@ class EventShow extends React.Component {
 
     likeButton() { 
         debugger 
-        if(this.props.currentUser) { 
+        if (this.props.currentUser) { 
             return (
-                <button className="button-tolike" onClick={this.handleUnLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
+                <button className="button-tolike" onClick={this.handleLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
             )
         }
         debugger 
-        if(this.props.event.likers.includes(this.props.currentUser.id)) { 
+        if (this.props.event.likers.includes(this.props.currentUser.id)) { 
             return ( 
-                <button className="button-unlike"onClick={this.handleLike}>Unlike</button>
+                <button className="button-unlike" onClick={this.handleUnLike}>{"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"}</button>
             )
         }else { 
             return( 
-                <button className="button-tolike" onClick={this.handleUnLike} ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
+                <button className="button-tolike" onClick={this.handleLike} ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
             )
         }
 
@@ -174,7 +174,7 @@ class EventShow extends React.Component {
                             <button className="button-edit" ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"}/></button>
                             </div> 
                             <button className="button-delete" onClick={this.handleDelete}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Trash-512.png"} /></button>
-                            <button className="button-like" >{this.likeButton()}</button>
+                            <div className="button-like" >{this.likeButton()}</div>
                             <div className="register-button">
                                 {this.registerButton()} 
                             </div>

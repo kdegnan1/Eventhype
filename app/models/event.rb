@@ -17,7 +17,8 @@ class Event < ApplicationRecord
     class_name: :EventLike 
 
     has_many :liked_users, 
-    through: :event_likes 
+    through: :event_likes,
+    source: :event 
 
     has_one_attached :photo
 
