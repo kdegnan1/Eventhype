@@ -1,6 +1,8 @@
 json.event do 
     json.extract! @event, :id, :title, :description, :event_type, :category, :price, :location, :start_date, :start_time, :end_date, :end_time, :image_url, :organizer
     json.attendees @event.user_ids 
+    json.likers event.liked_users 
+
     if @event.photo.attached?
         json.photoUrl url_for(@event.photo) 
     end
