@@ -70,5 +70,5 @@ export const createLike = event_id => dispatch => {
 }
 
 export const deleteLike = event_id => dispatch => { 
-    return ApiEventsUtil.deleteLike(id).then(id => dispatch(receiveEvent(event))) 
+    return ApiEventsUtil.deleteLike(event_id).then(event => dispatch(receiveEvent(event))) 
 }

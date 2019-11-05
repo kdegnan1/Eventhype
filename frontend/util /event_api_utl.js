@@ -84,7 +84,7 @@ export const deleteLike = (event_id) => {
     debugger
     return (
         $.ajax({ 
-            method: 'POST', 
+            method: 'DELETE', 
             url: `/api/events/${event_id}/event_likes`
         })
     )

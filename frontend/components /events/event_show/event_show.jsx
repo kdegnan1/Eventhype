@@ -15,7 +15,7 @@ class EventShow extends React.Component {
         this.handleUnRegister = this.handleUnRegister.bind(this); 
         this.handleDelete = this.handleDelete.bind(this); 
         this.handleLike = this.handleLike.bind(this) ;
-        this.handleUnLike - this.handleUnLike.bind(this);
+        this.handleUnLike = this.handleUnLike.bind(this);
     }
 
 
@@ -126,17 +126,17 @@ class EventShow extends React.Component {
 
     likeButton() { 
         debugger 
-        if (this.props.currentUser) { 
-            debugger
-            return (
-                <button className="button-tolike" onClick={this.handleLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
-            )
-        }
+        // if (this.props.currentUser) { 
+        //     debugger
+        //     return (
+        //         <button className="button-tolike" onClick={this.handleLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
+        //     )
+        // }
         debugger 
         if (this.props.event.likers.includes(this.props.currentUser.id)) { 
             debugger
             return ( 
-                <button className="button-unlike" onClick={this.handleUnLike}>{"https://eventhype-pic.s3.us-east-2.amazonaws.com/images.png"}</button> 
+                <button className="button-unlike" onClick={this.handleUnLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/images.png"}/></button> 
             )
         }else { 
             debugger
