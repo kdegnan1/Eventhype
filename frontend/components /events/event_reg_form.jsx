@@ -1,5 +1,6 @@
 import React from 'react' 
 import RegItem from './event_reg_item_form'
+import LikeItem from './event_like_item_form'
 
 class EventReg extends React.Component { 
     constructor(props) { 
@@ -39,9 +40,27 @@ class EventReg extends React.Component {
                 />
                 ) 
             }
-        })       
-           debugger 
-            
+        }) 
+        debugger
+        // let count1 = this.props.currentUser.liked.length; 
+        let likes = []; 
+        this.props.events.forEach((event, idx) => { 
+            debugger 
+            if(event.likers.includes(this.props.currentUser.id)) { 
+                debugger 
+                likes.push(
+                    <LikeItem 
+                    key={`eventlike-${idx}`}
+                    title={event.title}
+                    photoUrl={event.photoUrl}
+                    location={event.location}
+                    start_date={event.start_date}
+                    onEventClick={this.handleEventClick(event.id)}
+                    />
+                )
+            }
+        })
+                    
             return ( 
             <div className="reg-window">
                 <div className="backsplash">
@@ -54,21 +73,22 @@ class EventReg extends React.Component {
                                 </div>
                                 <div className="reg-likes">
                                     <span>{count} events </span>
-                                    <span className="like-me"># likes</span>
+                                    <span className="like-me">{likes.length} likes </span> 
                                 </div>
                             </div> 
                     </div>
                     <p className="title-event">Events</p>
                     <ul>
                         <div className="event-list">
-                            {arr} 
+                        {arr} 
                         </div>
                     </ul>
+
                     <div className="event-likes">
                         <p className="event-like-p">Likes</p>
                         <ul>
                             <div className="list-likes">
-                                
+                            {likes}
                             </div>
                         </ul>
                     </div>
