@@ -11,11 +11,13 @@ class EventShow extends React.Component {
             }
         
         this.registerButton = this.registerButton.bind(this); 
+        this.updateButton = this.updateButton.bind(this); 
         this.handleRegister = this.handleRegister.bind(this); 
         this.handleUnRegister = this.handleUnRegister.bind(this); 
         this.handleDelete = this.handleDelete.bind(this); 
         this.handleLike = this.handleLike.bind(this) ;
         this.handleUnLike = this.handleUnLike.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this); 
     }
 
 
@@ -100,13 +102,16 @@ class EventShow extends React.Component {
 
     handleUpdate(e) { 
         e.preventDefault(); 
-        this.props.history.push(`/events/${e.target.value}/update`)
+        debugger
+        this.props.history.push(`/events/${e.currentTarget.value}/update`)
     }
  
-    updatetButton() { 
-        let userID = this.props.currentUSer.id; 
+    updateButton() { 
+        let userID = this.props.currentUser.id; 
         let creatorID = this.props.event.creator_id; 
-        if (userId === creatorId) {
+        debugger
+        if (userID === creatorID) {
+            debugger 
            return <button className="button-edit" value={this.props.event.id} onClick={this.handleUpdate}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"} /></button>
         }
     }
@@ -186,7 +191,7 @@ class EventShow extends React.Component {
                         />
                         <div className="bar-show">
                             <div>
-                                {this.updateButton} 
+                                {this.updateButton()} 
                             </div> 
                             <button className="button-delete" onClick={this.handleDelete}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Trash-512.png"} /></button>
                             <div className="button-like" >{this.likeButton()}</div>
