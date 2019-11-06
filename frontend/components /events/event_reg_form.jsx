@@ -64,6 +64,15 @@ class EventReg extends React.Component {
                             {arr} 
                         </div>
                     </ul>
+                    <div className="event-likes">
+                        <p className="event-like-p">Likes</p>
+                        <ul>
+                            <div className="list-likes">
+                                
+                            </div>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
             
