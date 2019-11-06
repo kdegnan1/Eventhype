@@ -39,7 +39,10 @@ const receiveEmail = (email) => {
 
 export const fetchUser = id => dispatch => { 
     debugger
-    return fetchuser(id).then(user => dispatch(receiveCurrentUser(user)))
+    return fetchuser(id).then(user => {
+        debugger
+            return dispatch(receiveCurrentUser(user))
+    })
 }
 
 export const signupUser = formUser => dispatch => { 
