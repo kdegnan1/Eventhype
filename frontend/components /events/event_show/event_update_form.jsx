@@ -3,21 +3,22 @@ import React from 'react'
 class EventUpdateForm extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.state = {
-            creator_id: currentUser.id,
-            title: '',
-            location: '',
-            description: '',
-            start_date: '',
-            start_time: '',
-            end_date: '',
-            end_time: '',
-            organizer: '',
-            event_type: '',
-            price: '',
+            title: props.event.title,
+            location: props.event.location,
+            description: props.event.description,
+            start_date: props.event.start_date,
+            start_time: props.event.start_time,
+            end_date: props.event.end_date, 
+            end_time: props.event.end_time,
+            organizer: props.event.organizer,
+            event_type: props.event.event_type,
+            price: props.event.price, 
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this) 
     }
 
     handleInput(type) {
@@ -89,23 +90,23 @@ class EventUpdateForm extends React.Component {
                         </div>
 
                         <label >Event Description</label>
-                        <input className="desc-input" type="text" value={this.state.description} placeholder="   " onChange={this.handleInput('description')} />
+                        <input className="desc-input" type="text" value={this.state.description} onChange={this.handleInput('description')} />
 
                         <label>Organizer Name</label>
-                        <input className="organizer-input" type="text" value={this.state.organizer} placeholder="   Organizer" onChange={this.handleInput('organizer')} />
+                        <input className="organizer-input" type="text" value={this.state.organizer} onChange={this.handleInput('organizer')} />
 
                         <label>Price</label>
-                        <input className="price-input" type="text" value={this.state.price} placeholder="   Price" onChange={this.handleInput('price')} />
+                        <input className="price-input" type="text" value={this.state.price} onChange={this.handleInput('price')} />
 
                         <label>Select Type of Event</label>
                         <select onChange={this.handleInput('event_type')}>
                             <option value="Type">Type</option>
-                            <option key={11}>Concert</option>
-                            <option key={12}>Brunch</option>
-                            <option key={13}>Festival</option>
-                            <option key={14}>Nightlife</option>
-                            <option key={15}>Food</option>
-                            <option key={16}>Sport Event</option>
+                            <option key={1}>Concert</option>
+                            <option key={2}>Brunch</option>
+                            <option key={3}>Festival</option>
+                            <option key={4}>Nightlife</option>
+                            <option key={5}>Food</option>
+                            <option key={6}>Sport Event</option>
                         </select>
 
                         {/* <input className="input-image" type="file" onChange={this.handleFile} /> */}
