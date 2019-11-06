@@ -97,7 +97,15 @@ class EventShow extends React.Component {
         e.preventDefault(); 
         this.props.deleteEvent(this.props.event.id).then(() => this.props.history.push('/'))
     }
+
+    handleUpdate(e) { 
+        e.preventDefault(); 
+        this.props.history.push(`/events/${e.target.value}/update`)
+    }
  
+    editButton() { 
+        <button className="button-edit" ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"} /></button>
+    }
 
     registerButton() { 
         debugger
@@ -174,7 +182,7 @@ class EventShow extends React.Component {
                         />
                         <div className="bar-show">
                             <div>
-                            <button className="button-edit" ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"}/></button>
+                                {this.editButton} 
                             </div> 
                             <button className="button-delete" onClick={this.handleDelete}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Trash-512.png"} /></button>
                             <div className="button-like" >{this.likeButton()}</div>
