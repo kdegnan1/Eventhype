@@ -38,8 +38,13 @@ export const createEvent = (formData) => dispatch => {
     return ApiEventsUtil.createEvent(formData).then(event => dispatch(receiveEvent(event)))
 }
 
-export const updateEvent = (event) => dispatch => { 
-    return ApiEventsUtil.updateEvent(event).then(event => dispatch(receiveEvent(event)))
+export const updateEvent = (formData) => dispatch => { 
+    debugger
+    return ApiEventsUtil.updateEvent(formData).then(
+        event => { 
+            debugger
+            return dispatch(receiveEvent(event))
+        })
 }
 
 export const deleteEvent = (id) => dispatch => { 

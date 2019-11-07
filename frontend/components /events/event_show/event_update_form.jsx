@@ -29,6 +29,7 @@ class EventUpdateForm extends React.Component {
     }
 
     handleSubmit(event) {
+        debugger
         event.preventDefault();
         const formData = new FormData();
         formData.append('event[title]', this.state.title)
@@ -41,9 +42,11 @@ class EventUpdateForm extends React.Component {
         formData.append('event[price]', this.state.price)
         formData.append('event[organizer]', this.state.organizer)
         formData.append('event[event_type]', this.state.event_type)
+        formData.append("id", this.props.event.id)
         // if (this.state.photoFile) {
         //     formData.append('event[photo]', this.state.photoFile)
         // }
+        debugger
         this.props.updateEvent(formData).then(() => this.props.history.push('/'))
 
     }
@@ -52,9 +55,9 @@ class EventUpdateForm extends React.Component {
     //     this.setState({ photoFile: e.currentTarget.files[0] });
     // }
 
-    componentDidMount() {
-        this.props.fetchEvent(this.props.match.params.id)
-    }
+    // componentDidMount() {
+    //     this.props.fetchEvent(this.props.match.params.id)
+    // }
 
     render() {
         return (

@@ -31,11 +31,14 @@ export const createEvent = (formData) => {
 }
 
 export const updateEvent = (formData) => { 
+    debugger
     return (
         $.ajax({
             method: 'PATCH',
             url: `/api/events/${formData.get('event[id]')}`,  //append event.id 
-            data: formDAta
+            data: formData, 
+            contentType: false,
+            processData: false
         })
     )
 }

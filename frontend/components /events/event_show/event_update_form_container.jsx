@@ -14,7 +14,7 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => { 
     return { 
         updateEvent: (event) => dispatch(updateEvent(event)), 
-        fetchEvent: (id) => dispatch(fetchEvent(id)) 
+        // fetchEvent: (id) => dispatch(fetchEvent(id)) 
     }
 }
 
