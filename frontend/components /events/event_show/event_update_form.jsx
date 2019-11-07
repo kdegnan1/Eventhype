@@ -81,14 +81,14 @@ class EventUpdateForm extends React.Component {
                         <div className="date-time">
                             <label>Start</label>
                             <br />
-                            <input type="date" onChange={this.handleInput('start_date')} />
-                            <input type="time" onChange={this.handleInput('start_time')} />
+                            <input type="date" value={this.state.start_date} onChange={this.handleInput('start_date')} />
+                            <input type="time" value={this.state.start_time} onChange={this.handleInput('start_time')} />
                             <br />
                             <br />
                             <label>End</label>
                             <br />
-                            <input type="date" onChange={this.handleInput('end_date')} />
-                            <input type="time" onChange={this.handleInput('end_time')} />
+                            <input type="date" value={this.state.end_date} onChange={this.handleInput('end_date')} />
+                            <input type="time" value={this.state.end_time} onChange={this.handleInput('end_time')} />
                         </div>
 
                         <label >Event Description</label>
