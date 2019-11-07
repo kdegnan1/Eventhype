@@ -35,9 +35,9 @@ const BodyDesc = props => {
             <p className="super-desc">{props.description} </p>
             <div className="side-desc-info"> 
                 <h3>Date and Time </h3> 
-                    <div> <p className="a">Start:</p> <p>{start}</p>{props.fixstart}</div>
+                    <div> <p>{start}</p>{props.fixstart} <p>-</p></div> 
                    {/* <br/> */}
-                    <div> <p className="a">End:</p> <p>{end}</p>{props.fixend}</div>
+                    <div> <p>{end}</p>{props.fixend}</div>
                 <h3> Location </h3> 
                     <span>{props.location}</span> 
             </div>
