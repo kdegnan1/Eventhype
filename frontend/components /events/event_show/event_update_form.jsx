@@ -42,11 +42,10 @@ class EventUpdateForm extends React.Component {
         formData.append('event[price]', this.state.price)
         formData.append('event[organizer]', this.state.organizer)
         formData.append('event[event_type]', this.state.event_type)
-        formData.append("id", this.props.event.id)
+        formData.append("event[id]", this.props.event.id) 
         // if (this.state.photoFile) {
         //     formData.append('event[photo]', this.state.photoFile)
         // }
-        debugger
         this.props.updateEvent(formData).then(() => this.props.history.push('/'))
 
     }
