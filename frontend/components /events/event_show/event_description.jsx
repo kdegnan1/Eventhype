@@ -9,7 +9,7 @@ const BodyDesc = props => {
     let startdate_weekday = days[startdate.getDay()];
     let startdate_month = months[startdate.getMonth()];
     let startdate_year = startdate.getFullYear(); 
-    let startdate_date = startdate.getDate(); 
+    let startdate_date = startdate.getDate() + 1; 
     let start = '  ' +  startdate_weekday + ', ' + startdate_month + " " + startdate_date + ', ' + startdate_year
 
   
@@ -18,7 +18,7 @@ const BodyDesc = props => {
     let enddate_weekday = days[enddate.getDay()];
     let enddate_month = months[enddate.getMonth()];
     let enddate_year = enddate.getFullYear();
-    let enddate_date = enddate.getDate(); 
+    let enddate_date = enddate.getDate() + 1; 
     let end = enddate_weekday + ', ' + enddate_month + " " + enddate_date + ', ' + enddate_year
 
 

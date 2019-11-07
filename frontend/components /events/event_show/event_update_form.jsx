@@ -19,6 +19,7 @@ class EventUpdateForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleFile = this.handleFile.bind(this);
         this.handleInput = this.handleInput.bind(this); 
+        this.handlefix = this.handlefix.bind(this); 
     }
 
     handleInput(type) {
@@ -26,6 +27,16 @@ class EventUpdateForm extends React.Component {
             // debugger
             this.setState({ [type]: e.target.value })
         }
+    }
+
+    handlefix() { 
+        let starting = this.state.start_time; 
+        return starting.slice(11,16)
+    }
+
+    handlefix1() { 
+        let starting = this.state.end_time; 
+        return starting.slice(11,16)
     }
 
    
@@ -85,13 +96,13 @@ class EventUpdateForm extends React.Component {
                             <label>Start</label>
                             <br />
                             <input type="date" value={this.state.start_date} onChange={this.handleInput('start_date')} />
-                            <input type="time" value={this.state.start_time} onChange={this.handleInput('start_time')} />
+                            <input type="time" value={this.handlefix()} onChange={this.handleInput('start_time')} />
                             <br />
                             <br />
                             <label>End</label>
                             <br />
                             <input type="date" value={this.state.end_date} onChange={this.handleInput('end_date')} />
-                            <input type="time" value={this.state.end_time} onChange={this.handleInput('end_time')} />
+                            <input type="time" value={this.handlefix1()} onChange={this.handleInput('end_time')} />
                         </div>
 
                         <label >Event Description</label>
