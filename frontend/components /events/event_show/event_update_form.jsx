@@ -28,6 +28,8 @@ class EventUpdateForm extends React.Component {
         }
     }
 
+   
+
     handleSubmit(event) {
         debugger
         event.preventDefault();
@@ -59,6 +61,7 @@ class EventUpdateForm extends React.Component {
     // }
 
     render() {
+        debugger
         return (
             <div className="create-event-container">
                 <div className="banner">
