@@ -1,7 +1,7 @@
 import React from 'react' 
 import {connect} from 'react-redux' 
 import EventUpdateForm from './event_update_form'
-import {updateEvent} from '../../../actions/event_actions'
+import {updateEvent, fetchEvent} from '../../../actions/event_actions'
 
 const msp = (state, ownProps) => { 
     debugger
@@ -13,7 +13,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => { 
     return { 
-        updateEvent: (event) => dispatch(updateEvent(event)) 
+        updateEvent: (event) => dispatch(updateEvent(event)), 
+        fetchEvent: (id) => dispatch(fetchEvent(id)) 
     }
 }
 
