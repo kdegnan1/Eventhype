@@ -53,7 +53,7 @@ class EventUpdateForm extends React.Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
+        this.props.fetchEvent(this.props.match.params.id)
     }
 
     render() {
