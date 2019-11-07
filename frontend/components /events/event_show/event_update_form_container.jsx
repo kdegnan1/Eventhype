@@ -6,7 +6,7 @@ import {updateEvent, fetchEvent} from '../../../actions/event_actions'
 const msp = (state, ownProps) => { 
     debugger
     return {
-        event: state.entities.events[ownProps.match.params.id], 
+        event: state.entities.events[ownProps.match.params.eventId], 
         currentUser: state.session.id 
     }
 }

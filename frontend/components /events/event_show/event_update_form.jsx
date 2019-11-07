@@ -17,8 +17,8 @@ class EventUpdateForm extends React.Component {
             price: props.event.price, 
         }
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleFile = this.handleFile.bind(this);
-        this.handleUpdate = this.handleUpdate.bind(this) 
+        // this.handleFile = this.handleFile.bind(this);
+        this.handleInput = this.handleInput.bind(this); 
     }
 
     handleInput(type) {
@@ -41,16 +41,16 @@ class EventUpdateForm extends React.Component {
         formData.append('event[price]', this.state.price)
         formData.append('event[organizer]', this.state.organizer)
         formData.append('event[event_type]', this.state.event_type)
-        if (this.state.photoFile) {
-            formData.append('event[photo]', this.state.photoFile)
-        }
-        this.props.createEvent(formData).then(() => this.props.history.push('/'))
+        // if (this.state.photoFile) {
+        //     formData.append('event[photo]', this.state.photoFile)
+        // }
+        this.props.updateEvent(formData).then(() => this.props.history.push('/'))
 
     }
 
-    handleFile(e) {
-        this.setState({ photoFile: e.currentTarget.files[0] });
-    }
+    // handleFile(e) {
+    //     this.setState({ photoFile: e.currentTarget.files[0] });
+    // }
 
     componentDidMount() {
         this.props.fetchEvent(this.props.match.params.id)
@@ -60,8 +60,8 @@ class EventUpdateForm extends React.Component {
         return (
             <div className="create-event-container">
                 <div className="banner">
-                    <p>Create An Event</p>
-                    <button onClick={this.handleSubmit}>Publish</button>
+                    <p>Update Event</p> 
+                    <button onClick={this.handleSubmit}>Update</button> 
                 </div>
                 <nav className="bar"></nav>
                 <div className="backgroud-create-form">
