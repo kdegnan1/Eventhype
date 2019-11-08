@@ -72,7 +72,7 @@ class EventReg extends React.Component {
                                     <span className="name-title">{this.props.currentUser.lname}</span>
                                 </div>
                                 <div className="reg-likes">
-                                    <span>{count} events </span>
+                                    <span>{count} event registrations </span>
                                     <span className="like-me">{likes.length} likes </span> 
                                 </div>
                             </div> 
