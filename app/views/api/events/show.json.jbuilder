@@ -1,6 +1,6 @@
 
 json.event do 
-    json.extract! @event, :id, :title,:creator_id, :description, :event_type, :category, :price, :location, :start_date, :start_time, :end_date, :end_time, :image_url, :organizer
+    json.extract! @event, :id, :title,:creator_id, :description, :event_type,:price, :location, :start_date, :start_time, :end_date, :end_time, :organizer
     json.attendees @event.user_ids 
     json.likers @event.liked_user_ids
 
