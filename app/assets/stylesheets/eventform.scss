@@ -5,6 +5,10 @@
 
 }
 
+.create-event-container input { 
+    padding-left: 10px; 
+}
+
 .banner { 
     font-family: 'Montserrat', sans-serif;
     width: 100%; 
@@ -121,7 +125,7 @@
 
 .desc-input { 
     border: solid lightgray 1px; 
-    height: 180px;
+    height: 50px;
 }
 
 .organizer-input { 

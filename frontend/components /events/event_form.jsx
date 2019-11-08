@@ -71,10 +71,10 @@ class EventForm extends React.Component {
                     <form className="create-event-form">
 
                         <label className="title-labels">Event Title</label>
-                        <input className="long-input" type="text" value={this.state.title} placeholder="   Give it a short distinct name" onChange={this.handleInput('title')}/>
+                        <input className="long-input" type="text" value={this.state.title} placeholder="Give it a short distinct name" onChange={this.handleInput('title')}/>
                         
                         <label className="title-label">Location</label>
-                        <input className="long-input-location" type="text" value={this.state.location} placeholder="   Venue or address" onChange={this.handleInput('location')} />
+                        <input className="long-input-location" type="text" value={this.state.location} placeholder="Venue or address" onChange={this.handleInput('location')} />
                         
                         <div className="date-time"> 
                             <label>Start</label>  
@@ -93,10 +93,10 @@ class EventForm extends React.Component {
                         <input className="desc-input" type="text" value={this.state.description} placeholder="   " onChange={this.handleInput('description')} />
                         
                         <label>Organizer Name</label>
-                        <input className="organizer-input" type="text" value={this.state.organizer} placeholder="   Organizer" onChange={this.handleInput('organizer')}/>
+                        <input className="organizer-input" type="text" value={this.state.organizer} placeholder="Organizer" onChange={this.handleInput('organizer')}/>
 
                         <label>Price</label>
-                        <input className="price-input" type="text" value={this.state.price} placeholder="   Price" onChange={this.handleInput('price')}/>
+                        <input className="price-input" type="text" value={this.state.price} placeholder="Price" onChange={this.handleInput('price')}/>
 
                         <label>Select Type of Event</label>
                         <select onChange={this.handleInput('event_type')}>
