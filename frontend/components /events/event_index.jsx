@@ -5,9 +5,10 @@ class EventIndex extends React.Component {
     constructor(props) { 
         super(props); 
             this.state = { 
-                category: "All Categories"
+                event_type: "All Categories"
             }
             this.handleEventClick = this.handleEventClick.bind(this) 
+            this.update = this.update.bind(this); 
     }
 
     componentDidMount() { 
@@ -20,11 +21,17 @@ class EventIndex extends React.Component {
         }
     }
 
+    update(field) {
+        return e => {
+            this.setState({ [field]: e.currentTarget.value });
+        };
+    }
+
     render() { 
         let rows = this.props.events.map((event, idx) => { 
             if (
-                this.state.category === "All Categories" ||
-                event.category === this.state.category
+                this.state.event_type === "All Categories" ||
+                event.event_type === this.state.event_type
             ) {
             let {location, title, photoUrl, id, start_date} = event; 
             return (
@@ -44,8 +51,8 @@ class EventIndex extends React.Component {
             <div className="index-background"> 
                 <div className="index-container"> 
                     <div className="index-header"> <p className="popular">Popular in</p> <p className="newyork"> New York </p> </div> 
-                <div className="select-category">
-                    <select className="selector" value={this.state.category} onChange={this.update("category")}>
+                <div className="select-event_type">
+                    <select className="selector" value={this.state.event_type} onChange={this.update("event_type")}>
                             <option value="All Categories">All Categories</option>
                             <option key={1}>Concert</option>
                             <option key={2}>Brunch</option>
