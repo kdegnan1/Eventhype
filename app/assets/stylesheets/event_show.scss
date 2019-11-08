@@ -25,7 +25,8 @@
 .register-button { 
     margin-top: 15px; 
     padding-top: 10px; 
-    margin-left: 575px; 
+    margin-left: 650px; 
+    // margin-right: 50px; 
     height: 30px;
     width: 320px; 
     background-color: #428549; 
@@ -150,9 +151,11 @@
 
 .side-des-info h3 { 
     font-weight: 400;
+    // margin-top: 50px; 
 }
-
-
+.loc { 
+    margin-top: 50px; 
+}
 
 .header-title { 
     padding-left: 120px; 

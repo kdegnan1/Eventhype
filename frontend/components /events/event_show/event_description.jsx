@@ -38,7 +38,7 @@ const BodyDesc = props => {
                     <div> <p>{start}</p>{props.fixstart} <p>-</p></div> 
                    {/* <br/> */}
                     <div> <p>{end}</p>{props.fixend}</div>
-                <h3> Location </h3> 
+                <h3 className="loc"> Location </h3> 
                     <span>{props.location}</span> 
             </div>
 
