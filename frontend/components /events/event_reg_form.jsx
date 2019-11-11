@@ -24,7 +24,7 @@ class EventReg extends React.Component {
     }
 
     renderLike() { 
-        if() {
+        if(this.props.currentUser) {
         return(
         <p className="event-like-p">Likes</p>
         )
@@ -74,6 +74,8 @@ class EventReg extends React.Component {
                 )
             }
         })
+
+
                     
             return ( 
             <div className="reg-window">
