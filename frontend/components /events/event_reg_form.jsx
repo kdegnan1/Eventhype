@@ -15,7 +15,21 @@ class EventReg extends React.Component {
         this.props.fetchUser(this.props.currentUser.id)
     }
 
+    renderEvent() { 
+        if (this.props.currentUser.registered.length > 0) {
+        return (
+        <p className="title-event">Events</p>
+        )
+        }
+    }
 
+    renderLike() { 
+        if() {
+        return(
+        <p className="event-like-p">Likes</p>
+        )
+        }
+    }
 
     handleEventClick(id) {
         return () => {
@@ -77,7 +91,7 @@ class EventReg extends React.Component {
                                 </div>
                             </div> 
                     </div>
-                    <p className="title-event">Events</p>
+                    <div>{this.renderEvent()}</div>
                     <ul>
                         <div className="event-list">
                         {arr} 
@@ -85,7 +99,7 @@ class EventReg extends React.Component {
                     </ul>
 
                     <div className="event-likes">
-                        <p className="event-like-p">Likes</p>
+                        <div>{this.renderLike()}</div>
                         <ul>
                             <div className="list-likes">
                             {likes}
