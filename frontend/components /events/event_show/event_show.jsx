@@ -109,12 +109,16 @@ class EventShow extends React.Component {
     }
  
     updateButton() { 
-        let userID = this.props.currentUser.id; 
-        let creatorID = this.props.event.creator_id; 
-        debugger
-        if (userID === creatorID) {
-            debugger 
-           return <button className="button-edit" value={this.props.event.id} onClick={this.handleUpdate}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"} /></button>
+        if (this.props.currentUser) { 
+            let userID = this.props.currentUser.id; 
+            let creatorID = this.props.event.creator_id; 
+            debugger
+            if (userID === creatorID) {
+                debugger 
+            return <button className="button-edit" value={this.props.event.id} onClick={this.handleUpdate}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/71-512.png"} /></button>
+            }
+        }else{
+            return null; 
         }
     }
 
@@ -129,7 +133,7 @@ class EventShow extends React.Component {
                 <button className="toregister-button" onClick={this.handleRegister}>Register</button>
             )
         }
-        debugger
+
         if (this.props.event.attendees.includes(this.props.currentUser.id)) { 
             debugger 
             return (
@@ -152,16 +156,18 @@ class EventShow extends React.Component {
         //     )
         // }
         debugger 
-        if (this.props.event.likers.includes(this.props.currentUser.id)) { 
-            debugger
-            return ( 
-                <button className="button-unlike" onClick={this.handleUnLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/images.png"}/></button> 
-            )
-        }else { 
-            debugger
-            return( 
-                <button className="button-tolike" onClick={this.handleLike} ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
-            )
+        if (this.props.currentUser) { 
+            if (this.props.event.likers.includes(this.props.currentUser.id)) { 
+                debugger
+                return ( 
+                    <button className="button-unlike" onClick={this.handleUnLike}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/images.png"}/></button> 
+                )
+            }else { 
+                debugger
+                return( 
+                    <button className="button-tolike" onClick={this.handleLike} ><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/heart-outline-512.png"} /></button>
+                )
+            }
         }
 
     }
