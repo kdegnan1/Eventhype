@@ -24,7 +24,7 @@ class EventReg extends React.Component {
     }
 
     renderLike() { 
-        if(this.props.currentUser) {
+        if(this.props.currentUser.liked.length > 0) {
         return(
         <p className="event-like-p">Likes</p>
         )
