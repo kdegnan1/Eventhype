@@ -70,10 +70,12 @@ class EventShow extends React.Component {
     fixstarttime() {
         debugger
         let starttime = new Date(this.props.event.start_time)
-        let starttime_hours = starttime.getHours();
+        let starttime_hours = starttime.getHours() + 5;
         let starttime_minutes = starttime.getMinutes(); 
-        let last;
-        let newhour;
+
+        if(starttime_hours > 24) { 
+            starttime_hours = starttime_hours % 24
+        }
 
         if (starttime_hours < 12) { 
             return (starttime_hours) + ":" + starttime_minutes + '0' +  'AM'
@@ -81,17 +83,18 @@ class EventShow extends React.Component {
             return (starttime_hours) + ':' + starttime_minutes + '0' + 'PM'
         }else { 
             return (starttime_hours - 12) + ':' + starttime_minutes + '0' + 'PM'
-
         }
     }
 
     fixendtime() {
         debugger
         let endtime = new Date(this.props.event.end_time)
-        let endtime_hours = endtime.getHours();
+        let endtime_hours = endtime.getHours() + 5;
         let endtime_minutes = endtime.getMinutes(); 
-        let last1;
-        let newhour1;
+
+        if (endtime_hours > 24) {
+            endtime_hours = endtime_hours % 24
+        }
 
         if (endtime_hours < 12) {
             return (endtime_hours) + ":" + endtime_minutes + '0'+ 'AM'

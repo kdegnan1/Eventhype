@@ -10,6 +10,11 @@ const EventInfo = props => {
     let date = fulldate.getDate();
     let weekday = days[fulldate.getDay()];
     let indexdate1 = month + ' ' + date;
+    if(fulldate.getHours() + 5 > 24) { 
+        date = date + 1; 
+        weekday = weekday + 1; 
+        weekday = days[fulldate.getDay() + 1];
+    }
     return ( 
         <div className="event-info">     
             <img className="prof-pic" src={props.photo}/>
