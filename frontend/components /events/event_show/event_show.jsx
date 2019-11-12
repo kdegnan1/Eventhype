@@ -77,8 +77,11 @@ class EventShow extends React.Component {
 
         if (starttime_hours < 12) { 
             return (starttime_hours) + ":" + starttime_minutes + '0' +  'AM'
-        } else {
+        } else if(starttime_hours === 12) {
+            return (starttime_hours) + ':' + starttime_minutes + '0' + 'PM'
+        }else { 
             return (starttime_hours - 12) + ':' + starttime_minutes + '0' + 'PM'
+
         }
     }
 
