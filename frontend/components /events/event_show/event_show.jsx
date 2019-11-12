@@ -125,6 +125,20 @@ class EventShow extends React.Component {
         }
     }
 
+    deleteButton() { 
+        if (this.props.currentUser) {
+            let userID = this.props.currentUser.id;
+            let creatorID = this.props.event.creator_id;
+            debugger
+            if (userID === creatorID) {
+                debugger
+                return <button className="button-delete" onClick={this.handleDelete}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Trash-512.png"} /></button>
+            } 
+        } else {
+            return null;
+        }
+    }
+
     registerButton() { 
         debugger
         if (!this.props.event.attendees) { 
@@ -204,7 +218,9 @@ class EventShow extends React.Component {
                             <div>
                                 {this.updateButton()} 
                             </div> 
-                            <button className="button-delete" onClick={this.handleDelete}><img src={"https://eventhype-pic.s3.us-east-2.amazonaws.com/Trash-512.png"} /></button>
+                            <div>
+                                {this.deleteButton()}
+                            </div>
                             <div className="button-like" >{this.likeButton()}</div>
                             <div className="register-button">
                                 {this.registerButton()} 
