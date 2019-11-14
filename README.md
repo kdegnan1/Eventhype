@@ -9,6 +9,5 @@ To create this clone I used Rails as the backend and React-Redux for the fronten
 
 ## Config
 
-## What is left to work on
 
 
