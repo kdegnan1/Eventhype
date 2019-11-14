@@ -5,7 +5,7 @@ export const RECEIVE_EVENTS = 'RECEIVE_EVENTS'
 export const REMOVE_EVENT = 'REMOVE_EVENT'
 
 const receiveEvent = (event) => { 
-    debugger
+   ////debugger
     return ({
         type: RECEIVE_EVENT, 
         event
@@ -39,10 +39,10 @@ export const createEvent = (formData) => dispatch => {
 }
 
 export const updateEvent = (formData) => dispatch => { 
-    debugger
+    //debugger
     return ApiEventsUtil.updateEvent(formData).then(
         event => { 
-            debugger
+            ////debugger
             return dispatch(receiveEvent(event))
         })
 }
@@ -52,10 +52,10 @@ export const deleteEvent = (id) => dispatch => {
 }
 
 export const createRegistration = (event_id) => dispatch => { 
-    debugger
+    //debugger
     return ApiEventsUtil.createRegistration(event_id).then(
         event => { 
-            debugger
+            //debugger
         return  dispatch(receiveEvent(event))
         })
 }
@@ -66,10 +66,10 @@ export const deleteRegistration = (event_id, registration_id) => dispatch => {
 }
 
 export const createLike = event_id => dispatch => { 
-    debugger
+    //debugger
     return ApiEventsUtil.createLike(event_id).then(
             event => { 
-                debugger
+                //debugger
                 return dispatch(receiveEvent(event))
                 })
 }

@@ -6,16 +6,16 @@ const eventsReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
         case RECEIVE_CURRENT_USER: 
-        debugger
+        //debugger
              return Object.assign({}, state, action.userPayload.events) 
         case RECEIVE_EVENT: 
-        debugger
+        //debugger
             return Object.assign({}, state,{[action.event.event.id]: action.event.event} )
         case RECEIVE_EVENTS: 
-        // debugger
+        //debugger
             return action.events 
         case REMOVE_EVENT:
-            debugger
+            //debugger
             let newState = merge({}, state);
             delete newState[action.id];
            return newState;
