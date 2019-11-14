@@ -31,7 +31,7 @@ export const createEvent = (formData) => {
 }
 
 export const updateEvent = (formData) => { 
-    debugger
+    //debugger
     return (
         $.ajax({
             method: 'PATCH',
@@ -53,7 +53,7 @@ export const deleteEvent = (id) =>{
 }
 
 export const createRegistration = (event_id) => {
-    debugger 
+    //debugger 
     return (
         $.ajax({
             method: 'POST',
@@ -74,7 +74,7 @@ export const deleteRegistration = (event_id) => {
 }
 
 export const createLike = (event_id) => { 
-    debugger
+    //debugger
     return (
         $.ajax({ 
             method: 'POST', 
@@ -84,7 +84,7 @@ export const createLike = (event_id) => {
 }
 
 export const deleteLike = (event_id) => { 
-    debugger
+    //debugger
     return (
         $.ajax({ 
             method: 'DELETE', 

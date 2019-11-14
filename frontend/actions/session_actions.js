@@ -7,7 +7,7 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS'
 export const RECEIVE_EMAIL = 'RECEIVE_EMAIL'
 
 const receiveSessionErrors = errors => { 
-    // debugger
+    //debugger
     return ({ 
         type: RECEIVE_SESSION_ERRORS, 
         errors 
@@ -15,7 +15,7 @@ const receiveSessionErrors = errors => {
 } 
 
 const receiveCurrentUser = userPayload => { 
-    debugger
+    //debugger
     return ({ 
         type: RECEIVE_CURRENT_USER, 
         userPayload 
@@ -30,7 +30,7 @@ const logoutCurrentUser = () => {
 }
 
 const receiveEmail = (email) => { 
-    debugger
+    //debugger
     return({ 
         type: RECEIVE_EMAIL, 
         email
@@ -38,9 +38,9 @@ const receiveEmail = (email) => {
 }
 
 export const fetchUser = id => dispatch => { 
-    debugger
+    //debugger
     return fetchuser(id).then(user => {
-        debugger
+        //debugger
             return dispatch(receiveCurrentUser(user))
     })
 }
@@ -51,6 +51,7 @@ export const signupUser = formUser => dispatch => {
 }
 
 export const loginUser = formUser => dispatch => {
+    //debugger
     return login(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveSessionErrors(err.responseJSON))
     ); 
 }

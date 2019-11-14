@@ -14,19 +14,14 @@ class Api::UsersController < ApplicationController
     end
 
     def show 
-        # debugger
         @user = User.find(params[:id]) 
     end
 
     def find_user
-        # debugger
         @user = User.where(email: params[:user][:email])
-        # debugger
         unless @user.empty?
-            # debugger
             render json: [@user[0].email]
         else 
-            # debugger
             render json: [], status: 404 # render json: ["check your email"], status: 404
         end
     end
