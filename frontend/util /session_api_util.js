@@ -10,7 +10,7 @@ export const signup = (user) => {
 }
 
 export const login = (user) => { 
-    debugger
+    //debugger
     return (
         $.ajax({ 
             method: 'POST', 
@@ -28,7 +28,7 @@ export const logout = () => {
     ); 
 }
 export const finduser = (email) => { 
-    debugger
+    //debugger
     return( 
         $.ajax({ 
             method: 'GET',
