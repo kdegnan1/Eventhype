@@ -22,4 +22,3 @@ const sessionReducer = (state = _nullSession, action) => {
 
 export default sessionReducer; 
 
-//
