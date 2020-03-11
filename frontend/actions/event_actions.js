@@ -19,6 +19,7 @@ const receiveEvents = (events) => {
     })
 }
 
+
 const removeEvent = (id) => { 
     return({ 
         type: REMOVE_EVENT, 
@@ -39,17 +40,10 @@ export const createEvent = (formData) => dispatch => {
 }
 
 export const updateEvent = (formData) => dispatch => { 
-<<<<<<< HEAD
     //debugger
     return ApiEventsUtil.updateEvent(formData).then(
         event => { 
             ////debugger
-=======
-    debugger
-    return ApiEventsUtil.updateEvent(formData).then(
-        event => { 
-            debugger
->>>>>>> 0f7a53214ea908d6adcd92b555f347a5a98333af
             return dispatch(receiveEvent(event))
         })
 }
@@ -59,17 +53,10 @@ export const deleteEvent = (id) => dispatch => {
 }
 
 export const createRegistration = (event_id) => dispatch => { 
-<<<<<<< HEAD
     //debugger
     return ApiEventsUtil.createRegistration(event_id).then(
         event => { 
             //debugger
-=======
-    debugger
-    return ApiEventsUtil.createRegistration(event_id).then(
-        event => { 
-            debugger
->>>>>>> 0f7a53214ea908d6adcd92b555f347a5a98333af
         return  dispatch(receiveEvent(event))
         })
 }
@@ -80,17 +67,10 @@ export const deleteRegistration = (event_id, registration_id) => dispatch => {
 }
 
 export const createLike = event_id => dispatch => { 
-<<<<<<< HEAD
     //debugger
     return ApiEventsUtil.createLike(event_id).then(
             event => { 
                 //debugger
-=======
-    debugger
-    return ApiEventsUtil.createLike(event_id).then(
-            event => { 
-                debugger
->>>>>>> 0f7a53214ea908d6adcd92b555f347a5a98333af
                 return dispatch(receiveEvent(event))
                 })
 }
